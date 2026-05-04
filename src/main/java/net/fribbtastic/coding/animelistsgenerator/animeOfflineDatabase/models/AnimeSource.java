@@ -1,5 +1,6 @@
 package net.fribbtastic.coding.animelistsgenerator.animeOfflineDatabase.models;
 
+import lombok.Getter;
 import net.fribbtastic.coding.animelistsgenerator.models.AnimeItem;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,22 +18,22 @@ import java.util.regex.Pattern;
 @SuppressWarnings("JavadocLinkAsPlainText")
 public enum AnimeSource {
 
-//x    anidb_id 	            Integer     anidb.net
-//x    anilist_id   	        Integer     anilist.co
-//x    animecountdown_id    	Integer     animecountdown.com
-//x    animenewsnetwork_id      Integer     animenewsnetwork.com
-//x    anime-planet_id  	    String      anime-planet.com
-//x    anisearch_id         	Integer     anisearch.com
+//    anidb_id 	            Integer     anidb.net
+//    anilist_id   	        Integer     anilist.co
+//    animecountdown_id    	Integer     animecountdown.com
+//    animenewsnetwork_id   Integer     animenewsnetwork.com
+//    anime-planet_id  	    String      anime-planet.com
+//    anisearch_id         	Integer     anisearch.com
 //    imdb_id	            Integer
-//x    kitsu_id	            Integer     kitsu.app
-//x    livechart_id	        Integer     livechart.me
-//x    mal_id        	    Integer     myanimelist.net
-//x    simkl_id	            Integer     simkl.com
+//    kitsu_id	            Integer     kitsu.app
+//    livechart_id	        Integer     livechart.me
+//    mal_id        	    Integer     myanimelist.net
+//    simkl_id	            Integer     simkl.com
 //    themoviedb_id	        Integer
 //    thetvdb_id	        Integer
 
 
-    ANIDB("anidb.net") {
+    ANIDB("anidb.net", "anidb") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -42,7 +43,7 @@ public enum AnimeSource {
             }
         }
     },
-    ANILIST("anilist.co") {
+    ANILIST("anilist.co", "anilist") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -52,7 +53,7 @@ public enum AnimeSource {
             }
         }
     },
-    ANIMECOUNTDOWN("animecountdown.com") {
+    ANIMECOUNTDOWN("animecountdown.com", "animecountdown") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -62,7 +63,7 @@ public enum AnimeSource {
             }
         }
     },
-    ANIMENEWSNETWORK("animenewsnetwork.com") {
+    ANIMENEWSNETWORK("animenewsnetwork.com", "animenewsnetwork") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -92,9 +93,9 @@ public enum AnimeSource {
             }
         }
     },
-    ANIMEPLANET("anime-planet.com") {
+    ANIMEPLANET("anime-planet.com", "anime-planet") {
         /**
-         * anime-planet uses a String for the ID. no need to parse it to an Integer, just return it.
+         * anime-planet uses a String for the ID. no need to parse it to an Integer, return it instead.
          * @param item the {@link AnimeItem} that we want to set the anime-planet ID for
          * @param id the ID as {@link String}
          */
@@ -103,7 +104,7 @@ public enum AnimeSource {
             item.setAnimePlanet(id);
         }
     },
-    ANISEARCH("anisearch.com") {
+    ANISEARCH("anisearch.com", "anisearch") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -113,7 +114,7 @@ public enum AnimeSource {
             }
         }
     },
-    KITSU("kitsu.app") {
+    KITSU("kitsu.app", "kitsu") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -123,7 +124,7 @@ public enum AnimeSource {
             }
         }
     },
-    LIVECHART("livechart.me") {
+    LIVECHART("livechart.me", "livechart") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -133,7 +134,7 @@ public enum AnimeSource {
             }
         }
     },
-    MYANIMELIST("myanimelist.net") {
+    MYANIMELIST("myanimelist.net", "mal") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -143,7 +144,7 @@ public enum AnimeSource {
             }
         }
     },
-    SIMKL("simkl.com") {
+    SIMKL("simkl.com", "simkl") {
         @Override
         public void setId(AnimeItem item, String id) {
             try {
@@ -157,9 +158,12 @@ public enum AnimeSource {
     private static final Logger LOGGER = LoggerFactory.getLogger(AnimeSource.class);
 
     private final String host;
+    @Getter
+    private final String key;
 
-    AnimeSource(String host) {
+    AnimeSource(String host, String key) {
         this.host = host;
+        this.key = key;
     }
 
     public abstract void setId(AnimeItem item, String id);

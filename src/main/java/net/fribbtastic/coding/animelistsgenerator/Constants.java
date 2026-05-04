@@ -19,4 +19,7 @@ public class Constants {
 
     public static final String INDEX_DIRECTORY = "indices";
     public static final String INDEX_FILENAME_SUFFIX = "_index.json";
+
+    public static final String COLLECTION_DIRECTORY = "collections";
+    public static final String COLLECTION_FILENAME_SUFFIX = "_collection.json";
 }

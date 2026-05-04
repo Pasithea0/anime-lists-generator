@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.4</version>
+		<version>4.0.6</version>
 		<relativePath/> <!-- lookup parent from the repository -->
 	</parent>
 
@@ -99,6 +99,13 @@
 			<groupId>io.github.resilience4j</groupId>
 			<artifactId>resilience4j-all</artifactId>
 			<version>${resilience4j.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<!-- Source: https://mvnrepository.com/artifact/org.jgrapht/jgrapht-core -->
+		<dependency>
+			<groupId>org.jgrapht</groupId>
+			<artifactId>jgrapht-core</artifactId>
+			<version>1.5.2</version>
 			<scope>compile</scope>
 		</dependency>
 	</dependencies>

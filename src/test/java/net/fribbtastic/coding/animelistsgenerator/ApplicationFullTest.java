@@ -2,9 +2,10 @@ package net.fribbtastic.coding.animelistsgenerator;
 
 import net.fribbtastic.coding.animelistsgenerator.animeLists.service.AnimeListsService;
 import net.fribbtastic.coding.animelistsgenerator.animeOfflineDatabase.service.AnimeOfflineDatabaseService;
+import net.fribbtastic.coding.animelistsgenerator.collections.CollectionService;
 import net.fribbtastic.coding.animelistsgenerator.index.IndexService;
+import net.fribbtastic.coding.animelistsgenerator.models.AnimeCollection;
 import net.fribbtastic.coding.animelistsgenerator.models.AnimeItem;
-import net.fribbtastic.coding.animelistsgenerator.themoviedb.service.TheMovieDBService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -25,9 +26,9 @@ class ApplicationFullTest {
 	@Autowired
 	private AnimeListsService animeListsService;
 	@Autowired
-	private TheMovieDBService theMovieDBService;
-	@Autowired
 	private IndexService indexService;
+	@Autowired
+	private CollectionService collectionService;
 	@Autowired
 	private Generator generator;
 
@@ -62,13 +63,15 @@ class ApplicationFullTest {
 		Assertions.assertThat(mergedList.getFirst().getTvdb()).isEqualTo(72025);
 		Assertions.assertThat(mergedList.getFirst().getTheMovieDb()).isEqualTo(26209);
 
-		theMovieDBService.appendMissingIds(mergedList);
+		//theMovieDBService.appendMissingIds(mergedList);
 
 		//Assertions.assertThat(mergedList.getFirst().getImdb()).isEqualTo("tt0286390");
 
 		Map<String, Map<String, List<Integer>>> shardIndexMap = this.indexService.generateIndex(mergedList);
-
 		Assertions.assertThat(shardIndexMap).isNotNull();
+
+		Map<String, List<AnimeCollection>> collections = this.collectionService.generateCollections(mergedList);
+		Assertions.assertThat(collections).isNotNull();
 	}
 
 }
