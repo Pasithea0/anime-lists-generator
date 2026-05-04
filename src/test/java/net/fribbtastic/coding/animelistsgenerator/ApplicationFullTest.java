@@ -6,7 +6,6 @@ import net.fribbtastic.coding.animelistsgenerator.collections.CollectionService;
 import net.fribbtastic.coding.animelistsgenerator.index.IndexService;
 import net.fribbtastic.coding.animelistsgenerator.models.AnimeCollection;
 import net.fribbtastic.coding.animelistsgenerator.models.AnimeItem;
-import net.fribbtastic.coding.animelistsgenerator.themoviedb.service.TheMovieDBService;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -26,8 +25,6 @@ class ApplicationFullTest {
 	private AnimeOfflineDatabaseService animeOfflineDatabaseService;
 	@Autowired
 	private AnimeListsService animeListsService;
-	@Autowired
-	private TheMovieDBService theMovieDBService;
 	@Autowired
 	private IndexService indexService;
 	@Autowired

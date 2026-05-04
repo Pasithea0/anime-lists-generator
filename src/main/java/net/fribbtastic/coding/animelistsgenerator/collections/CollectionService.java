@@ -20,7 +20,6 @@ public class CollectionService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CollectionService.class);
 
-    private static final int MAX_DEGREE = 50;
     private static final int MAX_COLLECTION_SIZE = 100;
 
     private static final Comparator<String> MIXED_ID_COMPARATOR = (a, b) -> {
@@ -197,81 +196,4 @@ public class CollectionService {
 
         return false;
     }
-
-    /**
-     * generate the collections separated by source
-     *
-     * @param animeItems the list of AnimeItems
-     * @return the map of collections
-     */
-//    public Map<String, List<List<String>>> generateCollections(Collection<AnimeItem> animeItems) {
-//        Map<String, Graph<String, DefaultEdge>> graphs = new HashMap<>();
-//
-//        // Initialize the Graph for each source
-//        for (AnimeItem anime : animeItems) {
-//            // skip items without relations
-//            if (anime.getRelations() == null) {
-//                continue;
-//            }
-//
-//            for (String source : anime.getRelations().keySet()) {
-//                graphs.computeIfAbsent(source, s -> new SimpleGraph<>(DefaultEdge.class));
-//            }
-//        }
-//
-//        // build the graph by adding vertexes and edges
-//        for (AnimeItem anime : animeItems) {
-//
-//            Map<String, List<String>> relations = anime.getRelations();
-//
-//            // again, skip items without relations
-//            if (relations == null) {
-//                continue;
-//            }
-//
-//            for (Map.Entry<String, List<String>> relationEntry : relations.entrySet()) {
-//                String source = relationEntry.getKey();
-//                List<String> relatedIdList = relationEntry.getValue();
-//
-//                Graph<String, DefaultEdge> graph = graphs.get(source);
-//                String selfId = anime.getIdForSource(source);
-//                // skip if there is no graph for this source
-//                if (graph == null || selfId == null) {
-//                    continue;
-//                }
-//
-//                graph.addVertex(selfId);
-//
-//                for (String relation : relatedIdList) {
-//
-//                    graph.addVertex(relation);
-//                    graph.addEdge(selfId, relation);
-//                }
-//            }
-//        }
-//
-//        // extract collections for each source
-//        Map<String, List<List<String>>> result = new HashMap<>();
-//
-//        for (Map.Entry<String, Graph<String, DefaultEdge>> graphEntry : graphs.entrySet()) {
-//            String source = graphEntry.getKey();
-//            Graph<String, DefaultEdge> graph = graphEntry.getValue();
-//
-//            ConnectivityInspector<String, DefaultEdge> inspector = new ConnectivityInspector<>(graph);
-//
-//            // sorting
-//            List<Set<String>> connectedSets = inspector.connectedSets();
-//            List<List<String>> sortedCollections = new ArrayList<>();
-//
-//            for (Set<String> set : connectedSets) {
-//                List<String> sortedList = new ArrayList<>(set);
-//                sortedList.sort(MIXED_ID_COMPARATOR);
-//                sortedCollections.add(sortedList);
-//            }
-//
-//            result.put(source, sortedCollections);
-//        }
-//
-//        return result;
-//    }
 }
