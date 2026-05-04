@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -81,6 +82,12 @@ public class AnimeItem {
     @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = SeasonFilter.class)
     @JsonProperty("season")
     private Season season;
+
+    @JsonIgnore
+    private transient Map<String, List<String>> relations;
+
+    @JsonIgnore
+    private transient String title;
 
     /**
      * Set the IDs by parsing the individual Source URLs
@@ -250,5 +257,24 @@ public class AnimeItem {
         if (value != null) {
             map.put(key, String.valueOf(value));
         }
+    }
+
+    public String getIdForSource(String source) {
+        return switch (source) {
+            case "anidb" -> this.anidb != null ? this.anidb.toString() : null;
+            case "anilist" -> this.anilist != null ? this.anilist.toString() : null;
+            case "animecountdown" -> this.animeCountdown != null ? this.animeCountdown.toString() : null;
+            case "animenewsnetwork" -> this.animeNewsNetwork != null ? this.animeNewsNetwork.toString() : null;
+            case "anime-planet" -> this.animePlanet != null ? this.animePlanet : null;
+            case "anisearch" -> this.anisearch != null ? this.anisearch.toString() : null;
+            case "imdb" -> this.imdb != null ? this.imdb : null;
+            case "kitsu" -> this.kitsu != null ? this.kitsu.toString() : null;
+            case "livechart" -> this.livechart != null ? this.livechart.toString() : null;
+            case "mal" -> this.myanimelist != null ? this.myanimelist.toString() : null;
+            case "simkl" -> this.simkl != null ? this.simkl.toString() : null;
+            case "themoviedb" -> this.theMovieDb != null ? this.theMovieDb.toString() : null;
+            case "tvdb" -> this.tvdb != null ? this.tvdb.toString() : null;
+            default -> throw new IllegalStateException("Unexpected value: " + source);
+        };
     }
 }

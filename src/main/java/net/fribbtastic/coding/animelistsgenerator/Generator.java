@@ -1,7 +1,9 @@
 package net.fribbtastic.coding.animelistsgenerator;
 
 import net.fribbtastic.coding.animelistsgenerator.animeLists.service.AnimeListsService;
+import net.fribbtastic.coding.animelistsgenerator.collections.CollectionService;
 import net.fribbtastic.coding.animelistsgenerator.index.IndexService;
+import net.fribbtastic.coding.animelistsgenerator.models.AnimeCollection;
 import net.fribbtastic.coding.animelistsgenerator.models.AnimeItem;
 import net.fribbtastic.coding.animelistsgenerator.animeOfflineDatabase.service.AnimeOfflineDatabaseService;
 import net.fribbtastic.coding.animelistsgenerator.themoviedb.service.TheMovieDBService;
@@ -29,13 +31,15 @@ public class Generator {
     private final TheMovieDBService theMovieDBService;
     private final FileUtils fileUtils;
     private final IndexService indexService;
+    private final CollectionService collectionService;
 
-    public Generator(AnimeOfflineDatabaseService animeOfflineDatabaseService, AnimeListsService animeListsService, TheMovieDBService theMovieDBService, FileUtils fileUtils, IndexService indexService) {
+    public Generator(AnimeOfflineDatabaseService animeOfflineDatabaseService, AnimeListsService animeListsService, TheMovieDBService theMovieDBService, FileUtils fileUtils, IndexService indexService, CollectionService collectionService) {
         this.animeOfflineDatabaseService = animeOfflineDatabaseService;
         this.animeListsService = animeListsService;
         this.theMovieDBService = theMovieDBService;
         this.fileUtils = fileUtils;
         this.indexService = indexService;
+        this.collectionService = collectionService;
     }
 
     /**
@@ -64,6 +68,10 @@ public class Generator {
         // request TheMovieDB for IDs if not already available
         this.theMovieDBService.appendMissingIds(mergedList);
 
+        // save the merged list with pretty print and minified
+        this.fileUtils.writeToFile(mergedList, Path.of(Properties.projectPath + File.separator + Constants.ANIME_LISTS_FULL));
+        this.fileUtils.writeToFile(mergedList, Path.of(Properties.projectPath + File.separator + Constants.ANIME_LISTS_FULL_MINIFIED), false);
+
         /*
          shardIndexMap contains the following structure:
          outer key (first map): the source (mal, tmdb, imdb, tvdb, anidb, anime-planet, etc)
@@ -72,15 +80,20 @@ public class Generator {
          */
         Map<String, Map<String, List<Integer>>> shardIndexMap = this.indexService.generateIndex(mergedList);
         Map<String, Map<String, List<Integer>>> sortedShardIndexMap = this.sortIndices(shardIndexMap);
-
-        // save the merged list with pretty print and minified
-        this.fileUtils.writeToFile(mergedList, Path.of(Properties.projectPath + File.separator + Constants.ANIME_LISTS_FULL));
-        this.fileUtils.writeToFile(mergedList, Path.of(Properties.projectPath + File.separator + Constants.ANIME_LISTS_FULL_MINIFIED), false);
         // save one index file for each source
         for (Map.Entry<String, Map<String, List<Integer>>> shard : sortedShardIndexMap.entrySet()) {
             String source = shard.getKey();
 
             this.fileUtils.writeToFile(shard.getValue(), Path.of(Properties.projectPath + File.separator + Constants.INDEX_DIRECTORY + File.separator + source + Constants.INDEX_FILENAME_SUFFIX), true);
+        }
+
+        // generate the collections from the merged list
+        Map<String, List<AnimeCollection>> collections = this.collectionService.generateCollections(mergedList);
+
+        for (Map.Entry<String, List<AnimeCollection>> collection : collections.entrySet()) {
+            String source = collection.getKey();
+
+            this.fileUtils.writeToFile(collection.getValue(), Path.of(Properties.projectPath + File.separator + Constants.COLLECTION_DIRECTORY + File.separator + source + Constants.COLLECTION_FILENAME_SUFFIX), true);
         }
     }
 

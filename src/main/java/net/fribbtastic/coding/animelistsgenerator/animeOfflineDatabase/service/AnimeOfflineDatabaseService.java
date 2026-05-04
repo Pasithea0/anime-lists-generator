@@ -4,6 +4,7 @@ import net.fribbtastic.coding.animelistsgenerator.animeOfflineDatabase.dataSourc
 import net.fribbtastic.coding.animelistsgenerator.animeOfflineDatabase.models.AODB;
 import net.fribbtastic.coding.animelistsgenerator.animeOfflineDatabase.models.AODBItem;
 import net.fribbtastic.coding.animelistsgenerator.models.AnimeItem;
+import net.fribbtastic.coding.animelistsgenerator.utils.RelationParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -19,9 +20,11 @@ public class AnimeOfflineDatabaseService {
     private static final Logger LOGGER = LoggerFactory.getLogger(AnimeOfflineDatabaseService.class);
 
     private final AnimeOfflineDbDataSource dataSource;
+    private final RelationParser relationParser;
 
-    public AnimeOfflineDatabaseService(AnimeOfflineDbDataSource dataSource) {
+    public AnimeOfflineDatabaseService(AnimeOfflineDbDataSource dataSource, RelationParser relationParser) {
         this.dataSource = dataSource;
+        this.relationParser = relationParser;
     }
 
     /**
@@ -74,9 +77,17 @@ public class AnimeOfflineDatabaseService {
             // add the sources
             AnimeItem newItem = AnimeItem.fromAODBSourceUrls(item.getSources());
 
+            // set title
+            newItem.setTitle(item.getTitle());
+
             // set the type
             String type = item.getType();
             newItem.setType(type);
+
+            // set the relations
+            if (item.getRelatedAnime() != null && !item.getRelatedAnime().isEmpty()) {
+                newItem.setRelations(this.relationParser.parseRelations(item.getRelatedAnime()));
+            }
 
             // add the new Item to the List
             result.add(newItem);

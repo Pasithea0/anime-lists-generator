@@ -2,6 +2,8 @@ package net.fribbtastic.coding.animelistsgenerator;
 
 import net.fribbtastic.coding.animelistsgenerator.animeLists.service.AnimeListsService;
 import net.fribbtastic.coding.animelistsgenerator.animeOfflineDatabase.service.AnimeOfflineDatabaseService;
+import net.fribbtastic.coding.animelistsgenerator.collections.CollectionService;
+import net.fribbtastic.coding.animelistsgenerator.models.AnimeCollection;
 import net.fribbtastic.coding.animelistsgenerator.models.AnimeItem;
 import net.fribbtastic.coding.animelistsgenerator.themoviedb.service.TheMovieDBService;
 import org.assertj.core.api.Assertions;
@@ -12,6 +14,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author Frederic Eßer
@@ -26,6 +31,8 @@ public class ApplicationShortTest {
     private AnimeListsService animeListsService;
     @Autowired
     private TheMovieDBService theMovieDBService;
+    @Autowired
+    private CollectionService collectionService;
     @Autowired
     private Generator generator;
 
@@ -88,7 +95,7 @@ public class ApplicationShortTest {
         Assertions.assertThat(mergedList.getFirst().getSeason().getThetvdb()).isEqualTo(1);
         Assertions.assertThat(mergedList.getFirst().getSeason().getTheMovieDb()).isEqualTo(1);
 
-        theMovieDBService.appendMissingIds(mergedList);
+        this.theMovieDBService.appendMissingIds(mergedList);
 
         Assertions.assertThat(mergedList.getFirst().getImdb()).isEqualTo("tt0286390");
         Assertions.assertThat(mergedList.getFirst().getTvdb()).isEqualTo(72025);
@@ -99,5 +106,13 @@ public class ApplicationShortTest {
          TMDB does not allow a TVDB ID to be set for Movies even though TVDB also supports Movies now
          */
         // Assertions.assertThat(mergedList.get(1).getTvdb()).isEqualTo(791);
+
+        Map<String, List<AnimeCollection>> collections = this.collectionService.generateCollections(mergedList);
+
+        Assertions.assertThat(collections).isNotNull();
+        Assertions.assertThat(collections.size()).isEqualTo(9); // number of sources
+        Assertions.assertThat(collections.get("anidb")).isNotNull();
+        Assertions.assertThat(collections.get("anidb").size()).isEqualTo(32); // number of collections
+        Assertions.assertThat(collections.get("anidb").getFirst().getName()).isEqualTo("Seikai no Monshou");
     }
 }
