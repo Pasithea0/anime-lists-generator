@@ -20,6 +20,7 @@ public class CollectionService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CollectionService.class);
 
+    private static final int MAX_DEGREE = 50;
     private static final int MAX_COLLECTION_SIZE = 100;
 
     private static final Comparator<String> MIXED_ID_COMPARATOR = (a, b) -> {
@@ -114,10 +115,15 @@ public class CollectionService {
             }
         }
 
-        // Remove Hub nodes to prevent giant clusters
-//        for (Graph<String, DefaultEdge> graph : graphs.values()) {
-//            graph.vertexSet().removeIf(v -> graph.inDegreeOf(v) > MAX_DEGREE);
-//        }
+        // Remove large nodes to prevent giant clusters
+        for (Graph<String, DefaultEdge> graph : graphs.values()) {
+
+            List<String> toRemove = graph.vertexSet().stream()
+                    .filter(v -> graph.degreeOf(v) > MAX_DEGREE)
+                    .toList();
+
+            toRemove.forEach(graph::removeVertex);
+        }
 
         // extract collections
         Map<String, List<AnimeCollection>> result = new HashMap<>();
@@ -134,18 +140,33 @@ public class CollectionService {
                     continue;
                 }
 
-                List<String> sortedList = new ArrayList<>(connectedSet);
-                sortedList.sort(MIXED_ID_COMPARATOR);
+                List<String> sorted = new ArrayList<>(connectedSet);
+                sorted.sort(MIXED_ID_COMPARATOR);
 
-                String name = this.determineCollectionName(sortedList, lookup.get(source));
+                // determine the name of the collection
+                String name = this.determineCollectionName(sorted, lookup.get(source));
 
-                collections.add(new AnimeCollection(name, sortedList));
+                // convert the ID to the correct format
+                List<Object> convertedIds = sorted.stream().map(this::convertId).toList();
+
+                collections.add(new AnimeCollection(name, convertedIds));
             }
 
             result.put(source, collections);
         }
 
         return result;
+    }
+
+    private Object convertId(String id) {
+        if (id != null && id.matches("\\d+")) {
+            try {
+                return Integer.parseInt(id);
+            } catch (NumberFormatException e) {
+                LOGGER.warn("could not parse ID '{}' as Integer", id);
+            }
+        }
+        return id;
     }
 
     /**
@@ -156,6 +177,12 @@ public class CollectionService {
      * @return the name of the collection
      */
     private String determineCollectionName(List<String> sortedList, Map<String, AnimeItem> lookup) {
+
+        if(sortedList == null || sortedList.isEmpty()) {
+            return "Unknown";
+        }
+
+        // if there is no lookup map, just return the first ID as fallback
         if(lookup == null) {
             return sortedList.getFirst();
         }

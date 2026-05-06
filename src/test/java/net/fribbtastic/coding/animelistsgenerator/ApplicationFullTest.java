@@ -67,11 +67,17 @@ class ApplicationFullTest {
 
 		//Assertions.assertThat(mergedList.getFirst().getImdb()).isEqualTo("tt0286390");
 
-		Map<String, Map<String, List<Integer>>> shardIndexMap = this.indexService.generateIndex(mergedList);
-		Assertions.assertThat(shardIndexMap).isNotNull();
-
 		Map<String, List<AnimeCollection>> collections = this.collectionService.generateCollections(mergedList);
 		Assertions.assertThat(collections).isNotNull();
+
+		Map<String, Map<String, List<Integer>>> collectionIndexMap = this.indexService.generateCollectionIndex(collections);
+		Assertions.assertThat(collectionIndexMap).isNotNull();
+
+		Map<String, Map<String, List<Integer>>> shardIndexMap = this.indexService.generateAnimeListIndex(mergedList);
+		Assertions.assertThat(shardIndexMap).isNotNull();
+
+		Map<String, Map<String, Map<String, List<Integer>>>> combinedMaps = this.indexService.combineIndexMaps(shardIndexMap, collectionIndexMap);
+		Assertions.assertThat(combinedMaps).isNotNull();
 	}
 
 }

@@ -72,21 +72,6 @@ public class Generator {
         this.fileUtils.writeToFile(mergedList, Path.of(Properties.projectPath + File.separator + Constants.ANIME_LISTS_FULL));
         this.fileUtils.writeToFile(mergedList, Path.of(Properties.projectPath + File.separator + Constants.ANIME_LISTS_FULL_MINIFIED), false);
 
-        /*
-         shardIndexMap contains the following structure:
-         outer key (first map): the source (mal, tmdb, imdb, tvdb, anidb, anime-planet, etc)
-         inner key (second map): the ID of the item (e.g., mal_id in the merged list)
-         value: the array of indices where that ID can be found in the merged list
-         */
-        Map<String, Map<String, List<Integer>>> shardIndexMap = this.indexService.generateIndex(mergedList);
-        Map<String, Map<String, List<Integer>>> sortedShardIndexMap = this.sortIndices(shardIndexMap);
-        // save one index file for each source
-        for (Map.Entry<String, Map<String, List<Integer>>> shard : sortedShardIndexMap.entrySet()) {
-            String source = shard.getKey();
-
-            this.fileUtils.writeToFile(shard.getValue(), Path.of(Properties.projectPath + File.separator + Constants.INDEX_DIRECTORY + File.separator + source + Constants.INDEX_FILENAME_SUFFIX), true);
-        }
-
         // generate the collections from the merged list
         Map<String, List<AnimeCollection>> collections = this.collectionService.generateCollections(mergedList);
 
@@ -95,53 +80,18 @@ public class Generator {
 
             this.fileUtils.writeToFile(collection.getValue(), Path.of(Properties.projectPath + File.separator + Constants.COLLECTION_DIRECTORY + File.separator + source + Constants.COLLECTION_FILENAME_SUFFIX), true);
         }
-    }
 
-    /**
-     * sort the indexes in the index map of the individual shards
-     *
-     * @param shardIndexMap the whole index maps
-     * @return the sorted index maps
-     */
-    private Map<String, Map<String, List<Integer>>> sortIndices(Map<String, Map<String, List<Integer>>> shardIndexMap) {
+        // generate the index maps for the collections and the anime-lists
+        Map<String, Map<String, List<Integer>>> animeListIndex = this.indexService.generateAnimeListIndex(mergedList);
+        Map<String, Map<String, List<Integer>>> collectionIndex = this.indexService.generateCollectionIndex(collections);
+        Map<String, Map<String, Map<String, List<Integer>>>> combinedIndexMap = this.indexService.combineIndexMaps(animeListIndex, collectionIndex);
 
-        Map<String, Map<String, List<Integer>>> result = new HashMap<>();
+        // save one index file for each source
+        for (Map.Entry<String, Map<String, Map<String, List<Integer>>>> source : combinedIndexMap.entrySet()) {
+            String sourceName = source.getKey();
 
-        for (Map.Entry<String, Map<String, List<Integer>>> shard : shardIndexMap.entrySet()) {
-            String source = shard.getKey();
-            Map<String, List<Integer>> innerMap = shard.getValue();
-
-            List<String> sortedKeys = new ArrayList<>(innerMap.keySet());
-            sortedKeys.sort(this.idComparator());
-
-            Map<String, List<Integer>> sortedInnerMap = new LinkedHashMap<>();
-
-            for (String key : sortedKeys) {
-                sortedInnerMap.put(key, innerMap.get(key));
-            }
-
-            result.put(source, sortedInnerMap);
+            this.fileUtils.writeToFile(source.getValue(), Path.of(Properties.projectPath + File.separator + Constants.INDEX_DIRECTORY + File.separator + sourceName + Constants.INDEX_FILENAME_SUFFIX), true);
         }
-
-        return result;
-    }
-
-    /**
-     * comparator for sorting the IDs to compare them numerically.
-     *
-     * @return the comparator
-     */
-    private Comparator<String> idComparator() {
-        return (a,b) -> {
-            boolean aNum = a.matches("\\d+");
-            boolean bNum = b.matches("\\d+");
-
-            if (aNum && bNum) {
-                return Long.compare(Long.parseLong(a), Long.parseLong(b));
-            }
-
-            return a.compareTo(b);
-        };
     }
 
     /**
