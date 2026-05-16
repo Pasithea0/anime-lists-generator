@@ -95,13 +95,15 @@ public class IndexService {
             AnimeItem item = mergedList.get(i);
 
             // iterate over every available ID in the item
-            for (Map.Entry<String, String> entry : item.getIdMap().entrySet()) {
+            for (Map.Entry<String, List<String>> entry : item.getIndexIdMap().entrySet()) {
                 String source = entry.getKey(); // e.g. "anidb"
-                String value = entry.getValue(); // e.g. "1"
+                List<String> values = entry.getValue(); // e.g. ["1"] or ["movie:1234", "tv:4321"]
 
-                shardIndexMap.computeIfAbsent(source, s -> new TreeMap<>(MIXED_ID_COMPARATOR))
-                        .computeIfAbsent(value, v -> new ArrayList<>())
-                        .add(i);
+                for (String value : values) {
+                    shardIndexMap.computeIfAbsent(source, s -> new TreeMap<>(MIXED_ID_COMPARATOR))
+                            .computeIfAbsent(value, v -> new ArrayList<>())
+                            .add(i);
+                }
             }
         }
 

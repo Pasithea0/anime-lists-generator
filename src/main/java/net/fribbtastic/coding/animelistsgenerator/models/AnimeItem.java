@@ -73,7 +73,7 @@ public class AnimeItem {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("themoviedb_id")
-    private Integer theMovieDb;
+    private TheMovieDBItem theMovieDb;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("tvdb_id")
@@ -130,19 +130,19 @@ public class AnimeItem {
         1. with the tmdbid attribute
         2. with the tmdbtv attribute
          */
-        String tmdbId = item.getTmdbid();
-        Integer tmdbTvId = item.getTmdbtv();
+        TheMovieDBItem tmdbItem = null;
+        if (item.getTmdbid() != null || item.getTmdbtv() != null) {
+            tmdbItem = new TheMovieDBItem();
 
-        if (tmdbId != null && tmdbTvId != null) {
-            // both attributes are set, shouldn't happen but just to be sure
-            LOGGER.warn("Both TMDB ID ({}) and TMDB TV ID ({}) were set, don't know what to do", tmdbId, tmdbTvId);
-        } else if (tmdbId != null) {
-            // this would implicitly mean that tmdbTvId is null
-            animeItem.setTheMovieDb(parseStringToInteger(item.getAnidbid(),"tmdb id", tmdbId));
-        } else if (tmdbTvId != null) {
-            // this would implicitly mean that tmdbId is null
-            animeItem.setTheMovieDb(tmdbTvId);
+            if (item.getTmdbid() != null) {
+                tmdbItem.setMovie(parseStringToInteger(item.getAnidbid(),"tmdb id", item.getTmdbid()));
+            }
+            if (item.getTmdbtv() != null) {
+                tmdbItem.setTv(item.getTmdbtv());
+            }
         }
+
+        animeItem.setTheMovieDb(tmdbItem);
 
         // set TVDB ID
         animeItem.setTvdb(parseStringToInteger(item.getAnidbid(),"tvdb id", item.getTvdbid()));
@@ -220,42 +220,46 @@ public class AnimeItem {
         }
     }
 
-    /**
-     * create the Map of IDs for the AnimeItem
-     *
-     * @return the Map of IDs
-     */
     @JsonIgnore
-    public Map<String, String> getIdMap() {
-        Map<String, String> result = new HashMap<>();
+    public Map<String, List<String>> getIndexIdMap() {
+        Map<String, List<String>> result = new HashMap<>();
 
-        this.putIfNotNull(result, "anidb", this.anidb);
-        this.putIfNotNull(result, "anilist", this.anilist);
-        this.putIfNotNull(result, "animecountdown", this.animeCountdown);
-        this.putIfNotNull(result, "animenewsnetwork", this.animeNewsNetwork);
-        this.putIfNotNull(result, "anime-planet", this.animePlanet);
-        this.putIfNotNull(result, "anisearch", this.anisearch);
-        this.putIfNotNull(result, "imdb", this.imdb);
-        this.putIfNotNull(result, "kitsu", this.kitsu);
-        this.putIfNotNull(result, "livechart", this.livechart);
-        this.putIfNotNull(result, "mal", this.myanimelist);
-        this.putIfNotNull(result, "simkl", this.simkl);
-        this.putIfNotNull(result, "themoviedb", this.theMovieDb);
-        this.putIfNotNull(result, "tvdb", this.tvdb);
+        this.putIndexIdIfNotNull(result, "anidb", this.anidb);
+        this.putIndexIdIfNotNull(result, "anilist", this.anilist);
+        this.putIndexIdIfNotNull(result, "animecountdown", this.animeCountdown);
+        this.putIndexIdIfNotNull(result, "animenewsnetwork", this.animeNewsNetwork);
+        this.putIndexIdIfNotNull(result, "anime-planet", this.animePlanet);
+        this.putIndexIdIfNotNull(result, "anisearch", this.anisearch);
+        this.putIndexIdIfNotNull(result, "imdb", this.imdb);
+        this.putIndexIdIfNotNull(result, "kitsu", this.kitsu);
+        this.putIndexIdIfNotNull(result, "livechart", this.livechart);
+        this.putIndexIdIfNotNull(result, "mal", this.myanimelist);
+        this.putIndexIdIfNotNull(result, "simkl", this.simkl);
+        this.putTheMovieDbIndexIdsIfNotNull(result);
+        this.putIndexIdIfNotNull(result, "tvdb", this.tvdb);
 
         return result;
     }
 
-    /**
-     * check if the value is not null, then add it to the map
-     *
-     * @param map the map to add the value to
-     * @param key the key to use
-     * @param value the value to add
-     */
-    private void putIfNotNull(Map<String, String> map, String key, Object value) {
+    private void putIndexIdIfNotNull(Map<String, List<String>> map, String key, Object value) {
         if (value != null) {
-            map.put(key, String.valueOf(value));
+            map.computeIfAbsent(key, ignored -> new ArrayList<>()).add(String.valueOf(value));
+        }
+    }
+
+    private void putTheMovieDbIndexIdsIfNotNull(Map<String, List<String>> map) {
+        if (this.theMovieDb == null) {
+            return;
+        }
+
+        if (this.theMovieDb.getMovie() != null) {
+            map.computeIfAbsent("themoviedb", ignored -> new ArrayList<>())
+                    .add("movie:" + this.theMovieDb.getMovie());
+        }
+
+        if (this.theMovieDb.getTv() != null) {
+            map.computeIfAbsent("themoviedb", ignored -> new ArrayList<>())
+                    .add("tv:" + this.theMovieDb.getTv());
         }
     }
 
@@ -272,9 +276,26 @@ public class AnimeItem {
             case "livechart" -> this.livechart != null ? this.livechart.toString() : null;
             case "mal" -> this.myanimelist != null ? this.myanimelist.toString() : null;
             case "simkl" -> this.simkl != null ? this.simkl.toString() : null;
-            case "themoviedb" -> this.theMovieDb != null ? this.theMovieDb.toString() : null;
+            case "themoviedb" -> this.getTheMovieDbIndexId();
             case "tvdb" -> this.tvdb != null ? this.tvdb.toString() : null;
             default -> throw new IllegalStateException("Unexpected value: " + source);
         };
+    }
+
+    @JsonIgnore
+    private String getTheMovieDbIndexId() {
+        if (this.theMovieDb == null) {
+            return null;
+        }
+
+        if (this.theMovieDb.getMovie() != null) {
+            return "movie:" + this.theMovieDb.getMovie();
+        }
+
+        if (this.theMovieDb.getTv() != null) {
+            return "tv:" + this.theMovieDb.getTv();
+        }
+
+        return null;
     }
 }

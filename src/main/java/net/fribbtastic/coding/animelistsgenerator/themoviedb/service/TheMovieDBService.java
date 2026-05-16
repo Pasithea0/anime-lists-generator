@@ -1,6 +1,7 @@
 package net.fribbtastic.coding.animelistsgenerator.themoviedb.service;
 
 import net.fribbtastic.coding.animelistsgenerator.models.AnimeItem;
+import net.fribbtastic.coding.animelistsgenerator.models.TheMovieDBItem;
 import net.fribbtastic.coding.animelistsgenerator.themoviedb.dataSources.TheMovieDBDataSource;
 import net.fribbtastic.coding.animelistsgenerator.themoviedb.model.TmdbFindResult;
 import net.fribbtastic.coding.animelistsgenerator.themoviedb.model.TmdbItem;
@@ -31,53 +32,21 @@ public class TheMovieDBService {
 
         for (AnimeItem item : itemList) {
             LOGGER.info("Processing item with TMDB ID: [{}], TVDB ID: [{}], IMDB ID: [{}], Type: [{}]", item.getTheMovieDb(), item.getTvdb(), item.getImdb(), item.getType());
-            boolean tmdbId = item.getTheMovieDb() != null;
-            boolean tvdbId = item.getTvdb() != null;
-            boolean imdbId = item.getImdb() != null;
-            String type = item.getType();
+            boolean tmdb = item.getTheMovieDb() != null;
 
-            if (tmdbId) {
-                // the item has a TheMovieDB ID set
+            if (tmdb) {
 
-                if (!tvdbId || !imdbId) {
-                    // either tvdb id or imdb id is not set
-                    LOGGER.debug("TMDB ID [{}] available, TVDB ID [{}] or IMDB ID [{}] missing", item.getTheMovieDb(), item.getTvdb(), item.getImdb());
+                // we have a TMDB object that should have IDs
+                this.getTmdbInformationForId(item);
 
-                    // TheMovieDB API requests can only be done when we have a mediaType
-                    if (type != null) {
-                        /*
-                        TheMovieDB distinguishes the items between TV and Movie API endpoints
-                        The TMDB ID is shared between those two, the same ID can therefore be available for both
-
-                        The Type of the Anime can be more than just TV or Movie it can be: Special, ONA, OVA, etc.
-                        Since we cannot specifically tell what a Special, ONA, OVA is, we will only process items that either have TV or MOVIE as Type
-                         */
-                        String mediaType = null;
-                        if (type.equals("TV")) {
-                            // set the media type to "tv", request the external IDs for the TMDB
-                            mediaType = "tv";
-                        } else if (type.equals("MOVIE")) {
-                            // set the media type to "movie", request the external IDs for the TMDB
-                            mediaType = "movie";
-                        } else {
-                            LOGGER.info("Item with TMDB ID [{}] has unsupported type [{}], skipping", item.getTheMovieDb(), type);
-                        }
-
-                        if (mediaType != null) {
-                            // use the TMDB ID to retrieve the external IDs from the TMDB API
-                            this.updateInfoFromTmdb(item, mediaType);
-                        }
-                    }
-                } else {
-                    // both tvdb id and imdb id are set, so we don't need to do anything
-                    LOGGER.info("TMDB ID [{}], TVDB ID [{}], IMDB ID [{}] available -> nothing to do here", item.getTheMovieDb(), item.getTvdb(), item.getImdb());
-                }
             } else {
+
                 // the item has no TheMovieDB ID set
                 LOGGER.debug("TMDB ID missing, need to look it up");
 
                 String source = null;
                 String lookupId = null;
+
                 if (item.getImdb() != null) {
                     LOGGER.info("IMDB ID [{}] available, looking up TMDB ID", item.getImdb());
 
@@ -98,8 +67,7 @@ public class TheMovieDBService {
 
                     if (findResult != null) {
 
-                        Integer foundTmdbID = null;
-                        String mediaType = null;
+                        TheMovieDBItem theMovieDbItem = null;
 
                         /*
                          TMDB will respond with different result objects, movie_results or tv_results
@@ -110,45 +78,107 @@ public class TheMovieDBService {
                             LOGGER.debug("Found Movie results for source [{}] with ID [{}]",source, lookupId);
                             TmdbMovieResult movieResult = findResult.getMovieResults().getFirst();
 
-                            foundTmdbID = movieResult.getId();
-                            mediaType = movieResult.getMediaType();
-
+                            Integer foundTmdbID = movieResult.getId();
+                            if (foundTmdbID != null) {
+                                theMovieDbItem = new TheMovieDBItem();
+                                theMovieDbItem.setMovie(foundTmdbID);
+                            }
                         } else if (findResult.getTvResults() != null && !findResult.getTvResults().isEmpty()) {
                             LOGGER.debug("Found TV results for source [{}] with ID [{}]",source, lookupId);
                             TmdbTvResult tvResult = findResult.getTvResults().getFirst();
 
-                            foundTmdbID = tvResult.getId();
-                            mediaType = tvResult.getMediaType();
-                        }
-
-                        // Add the TMDB ID to the item, when available
-                        if (foundTmdbID != null) {
-                            item.setTheMovieDb(foundTmdbID);
-
-                            // use the TMDB ID to retrieve the external IDs from the TMDB API
-                            this.updateInfoFromTmdb(item, mediaType);
-
+                            Integer foundTmdbID = tvResult.getId();
+                            if (foundTmdbID != null) {
+                                theMovieDbItem = new TheMovieDBItem();
+                                theMovieDbItem.setTv(foundTmdbID);
+                            }
                         } else {
-                            LOGGER.info("TMDB Lookup returned nothing for source [{}] with ID [{}]", source, lookupId);
+                            LOGGER.debug("Found no results for source [{}] with ID [{}]",source, lookupId);
                         }
-                    } else {
-                        LOGGER.info("TMDB Lookup returned nothing.");
+
+                        item.setTheMovieDb(theMovieDbItem);
+
+                        // use the TMDB ID to retrieve the external IDs from the TMDB API
+
+                        this.getTmdbInformationForId(item);
                     }
                 }
-
             }
             LOGGER.info("Finished processing item with TMDB ID: [{}], TVDB ID: [{}], IMDB ID: [{}], Type: [{}]", item.getTheMovieDb(), item.getTvdb(), item.getImdb(), item.getType());
         }
     }
 
     /**
+     * Get the TMDB information for the given ID
+     *
+     * @param item the Anime item with all the IDs
+     */
+    private void getTmdbInformationForId(AnimeItem item) {
+        boolean tmdbTvId = item.getTheMovieDb() != null && item.getTheMovieDb().getTv() != null;
+        boolean tmdbId = item.getTheMovieDb() != null && item.getTheMovieDb().getMovie() != null;
+        boolean tvdbId = item.getTvdb() != null;
+        boolean imdbId = item.getImdb() != null;
+
+        if (!tvdbId || !imdbId) {
+            // either tvdb id or imdb id is not set
+            LOGGER.debug("TMDB ID [{}] available, TVDB ID [{}] or IMDB ID [{}] missing", item.getTheMovieDb(), item.getTvdb(), item.getImdb());
+
+            /*
+            TheMovieDB uses separate API endpoints for TV and Movie
+            The TMDB ID is shared between those two, the same ID can therefore be available in both for different results
+
+            Depending on which ID is set, TV or Movie, this needs to be used for the endpoint request
+             */
+            TmdbItem theMovieDbItem = null;
+            if (tmdbId) {
+                // we have an ID that is a Movie
+                theMovieDbItem = this.getTmdbMovieInfo(item.getTheMovieDb().getMovie());
+            } else if (tmdbTvId) {
+                // we have an ID that is a TV Show
+                theMovieDbItem = this.getTmdbTvInfo(item.getTheMovieDb().getTv());
+            } else {
+                LOGGER.warn("TMDB Object was set but there was no ID, skipping");
+            }
+
+            if (theMovieDbItem != null) {
+                this.updateInfoFromTmdb(item, theMovieDbItem);
+            } else {
+                LOGGER.debug("TMDB response for IDs [{}] was null, skipping", item.getTheMovieDb());
+            }
+
+        } else {
+            // both tvdb id and imdb id are set, so we don't need to do anything
+            LOGGER.info("TMDB ID [{}], TVDB ID [{}], IMDB ID [{}] available -> nothing to do here", item.getTheMovieDb(), item.getTvdb(), item.getImdb());
+        }
+    }
+
+    /**
+     * Get the TV Show from the TMDB API with the given ID
+     *
+     * @param id the TMDB ID of the TV Show
+     * @return the {@link TmdbItem} returned by the TMDB API
+     */
+    private TmdbItem getTmdbTvInfo(Integer id) {
+        return this.dataSource.loadData("tv", id);
+    }
+
+    /**
+     * Get the Movie from the TMDB API with the given ID
+     *
+     * @param id the TMDB ID of the Movie
+     * @return the {@link TmdbItem} returned by the TMDB API
+     */
+    private TmdbItem getTmdbMovieInfo(Integer id) {
+        return this.dataSource.loadData("movie", id);
+    }
+
+    /**
      * Update the IMDB and TVDB ID from the TMDB API
      *
      * @param item the Anime item that will be updated
-     * @param mediaType the media Type that should be used for the request
+     * @param theMovieDbItem the {@link TmdbItem} returned by the TMDB API
      */
-    private void updateInfoFromTmdb(AnimeItem item, String mediaType) {
-        TmdbItem theMovieDbItem = this.dataSource.loadData(mediaType, item.getTheMovieDb());
+    private void updateInfoFromTmdb(AnimeItem item, TmdbItem theMovieDbItem) {
         if (theMovieDbItem != null) {
 
             StringJoiner updates = new StringJoiner(", ");

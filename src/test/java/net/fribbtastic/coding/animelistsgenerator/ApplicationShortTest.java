@@ -48,7 +48,7 @@ public class ApplicationShortTest {
         ArrayList<AnimeItem> aodbList = this.animeOfflineDatabaseService.generateList();
 
         Assertions.assertThat(aodbList).isNotNull();
-        Assertions.assertThat(aodbList.size()).isEqualTo(3);
+        Assertions.assertThat(aodbList.size()).isEqualTo(4);
         Assertions.assertThat(aodbList.getFirst()).isNotNull();
         Assertions.assertThat(aodbList.getFirst().getAnidb()).isEqualTo(1);
         Assertions.assertThat(aodbList.getFirst().getAnilist()).isEqualTo(290);
@@ -64,11 +64,13 @@ public class ApplicationShortTest {
         ArrayList<AnimeItem> animeListsList = this.animeListsService.generateList();
 
         Assertions.assertThat(animeListsList).isNotNull();
-        Assertions.assertThat(animeListsList.size()).isEqualTo(3);
+        Assertions.assertThat(animeListsList.size()).isEqualTo(4);
         Assertions.assertThat(animeListsList.getFirst()).isNotNull();
         Assertions.assertThat(animeListsList.getFirst().getAnidb()).isEqualTo(1);
         Assertions.assertThat(animeListsList.getFirst().getTvdb()).isEqualTo(72025);
-        Assertions.assertThat(animeListsList.getFirst().getTheMovieDb()).isEqualTo(26209);
+        Assertions.assertThat(animeListsList.getFirst().getTheMovieDb()).isNotNull();
+        Assertions.assertThat(animeListsList.getFirst().getTheMovieDb().getMovie()).isNull();
+        Assertions.assertThat(animeListsList.getFirst().getTheMovieDb().getTv()).isEqualTo(26209);
         Assertions.assertThat(animeListsList.getFirst().getSeason()).isNotNull();
         Assertions.assertThat(animeListsList.getFirst().getSeason().getThetvdb()).isEqualTo(1);
         Assertions.assertThat(animeListsList.getFirst().getSeason().getTheMovieDb()).isEqualTo(1);
@@ -89,7 +91,9 @@ public class ApplicationShortTest {
         Assertions.assertThat(mergedList.getFirst().getSimkl()).isEqualTo(36462);
         Assertions.assertThat(mergedList.getFirst().getAnidb()).isEqualTo(1);
         Assertions.assertThat(mergedList.getFirst().getTvdb()).isEqualTo(72025);
-        Assertions.assertThat(mergedList.getFirst().getTheMovieDb()).isEqualTo(26209);
+        Assertions.assertThat(animeListsList.getFirst().getTheMovieDb()).isNotNull();
+        Assertions.assertThat(animeListsList.getFirst().getTheMovieDb().getMovie()).isNull();
+        Assertions.assertThat(animeListsList.getFirst().getTheMovieDb().getTv()).isEqualTo(26209);
         Assertions.assertThat(mergedList.getFirst().getSeason()).isNotNull();
         Assertions.assertThat(mergedList.getFirst().getSeason().getThetvdb()).isEqualTo(1);
         Assertions.assertThat(mergedList.getFirst().getSeason().getTheMovieDb()).isEqualTo(1);
@@ -100,7 +104,9 @@ public class ApplicationShortTest {
         Assertions.assertThat(mergedList.getFirst().getTvdb()).isEqualTo(72025);
 
         Assertions.assertThat(mergedList.get(1).getImdb()).isEqualTo("tt0119698");
-        Assertions.assertThat(mergedList.get(1).getTheMovieDb()).isEqualTo(128);
+        Assertions.assertThat(mergedList.get(1).getTheMovieDb()).isNotNull();
+        Assertions.assertThat(mergedList.get(1).getTheMovieDb().getMovie()).isEqualTo(128);
+        Assertions.assertThat(mergedList.get(1).getTheMovieDb().getTv()).isNull();
         /*
          TMDB does not allow a TVDB ID to be set for Movies even though TVDB also supports Movies now
          */
@@ -111,7 +117,7 @@ public class ApplicationShortTest {
         Assertions.assertThat(collections).isNotNull();
         Assertions.assertThat(collections.size()).isEqualTo(9); // number of sources
         Assertions.assertThat(collections.get("anidb")).isNotNull();
-        Assertions.assertThat(collections.get("anidb").size()).isEqualTo(32); // number of collections
+        Assertions.assertThat(collections.get("anidb").size()).isEqualTo(39); // number of collections
         Assertions.assertThat(collections.get("anidb").getFirst().getName()).isEqualTo("Seikai no Monshou");
     }
 }

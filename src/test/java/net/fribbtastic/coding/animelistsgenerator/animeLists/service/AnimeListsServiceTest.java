@@ -34,7 +34,9 @@ class AnimeListsServiceTest {
         Assertions.assertThat(list.getFirst()).isNotNull();
         Assertions.assertThat(list.getFirst().getAnidb()).isEqualTo(1);
         Assertions.assertThat(list.getFirst().getTvdb()).isEqualTo(72025);
-        Assertions.assertThat(list.getFirst().getTheMovieDb()).isEqualTo(26209);
+        Assertions.assertThat(list.getFirst().getTheMovieDb()).isNotNull();
+        Assertions.assertThat(list.getFirst().getTheMovieDb().getMovie()).isNull();
+        Assertions.assertThat(list.getFirst().getTheMovieDb().getTv()).isEqualTo(26209);
     }
 
 }

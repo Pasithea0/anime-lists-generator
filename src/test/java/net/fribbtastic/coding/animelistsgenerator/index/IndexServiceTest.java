@@ -56,14 +56,14 @@ class IndexServiceTest {
         Assertions.assertThat(shardIndexMap.size()).isEqualTo(13);
 
         Assertions.assertThat(shardIndexMap.get("anidb")).isNotNull();
-        Assertions.assertThat(shardIndexMap.get("anidb").size()).isEqualTo(3);
+        Assertions.assertThat(shardIndexMap.get("anidb").size()).isEqualTo(4);
         Assertions.assertThat(shardIndexMap.get("anidb").get("1")).isNotNull();
         Assertions.assertThat(shardIndexMap.get("anidb").get("1").size()).isEqualTo(1);
 
         Assertions.assertThat(shardIndexMap.get("themoviedb")).isNotNull();
-        Assertions.assertThat(shardIndexMap.get("themoviedb").size()).isEqualTo(3);
-        Assertions.assertThat(shardIndexMap.get("themoviedb").get("26209")).isNotNull();
-        Assertions.assertThat(shardIndexMap.get("themoviedb").get("26209").size()).isEqualTo(1);
+        Assertions.assertThat(shardIndexMap.get("themoviedb").size()).isEqualTo(4);
+        Assertions.assertThat(shardIndexMap.get("themoviedb").get("tv:26209")).isNotNull();
+        Assertions.assertThat(shardIndexMap.get("themoviedb").get("tv:26209").size()).isEqualTo(1);
 
         Assertions.assertThat(shardIndexMap.get("animenewsnetwork")).isNotNull();
         Assertions.assertThat(shardIndexMap.get("animenewsnetwork").size()).isEqualTo(2);
