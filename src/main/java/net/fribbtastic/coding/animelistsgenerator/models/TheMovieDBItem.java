@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @author Frederic Eßer
  */
@@ -12,7 +14,7 @@ public class TheMovieDBItem {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("movie")
-    private Integer movie;
+    private List<Integer> movie;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("tv")

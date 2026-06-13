@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.StringJoiner;
 
 /**
@@ -51,7 +52,12 @@ public class TheMovieDBService {
                     LOGGER.info("IMDB ID [{}] available, looking up TMDB ID", item.getImdb());
 
                     source = "imdb_id";
-                    lookupId = item.getImdb();
+                    // TODO: (at some point) It might make sense to look up every single IMDB ID in the list
+                    // Since the change to a list of IDs for the IMDB IDs, technically, I would need go through that list
+                    // and look up the TMDB ID for each one. But this would then require that this would then also be checked
+                    // against each other so that the resulting ID is the same, because if not, what would the process then be?
+                    // this should be fine for now
+                    lookupId = item.getImdb().getFirst();
                 } else if (item.getTvdb() != null) {
                     LOGGER.info("TVDB ID [{}] available, looking up TMDB ID", item.getTvdb());
 
@@ -81,7 +87,7 @@ public class TheMovieDBService {
                             Integer foundTmdbID = movieResult.getId();
                             if (foundTmdbID != null) {
                                 theMovieDbItem = new TheMovieDBItem();
-                                theMovieDbItem.setMovie(foundTmdbID);
+                                theMovieDbItem.setMovie(new ArrayList<>(List.of(foundTmdbID)));
                             }
                         } else if (findResult.getTvResults() != null && !findResult.getTvResults().isEmpty()) {
                             LOGGER.debug("Found TV results for source [{}] with ID [{}]",source, lookupId);
@@ -115,7 +121,9 @@ public class TheMovieDBService {
      */
     private void getTmdbInformationForId(AnimeItem item) {
         boolean tmdbTvId = item.getTheMovieDb() != null && item.getTheMovieDb().getTv() != null;
-        boolean tmdbId = item.getTheMovieDb() != null && item.getTheMovieDb().getMovie() != null;
+        boolean tmdbId = item.getTheMovieDb() != null
+                && item.getTheMovieDb().getMovie() != null
+                && !item.getTheMovieDb().getMovie().isEmpty();
         boolean tvdbId = item.getTvdb() != null;
         boolean imdbId = item.getImdb() != null;
 
@@ -132,7 +140,11 @@ public class TheMovieDBService {
             TmdbItem theMovieDbItem = null;
             if (tmdbId) {
                 // we have an ID that is a Movie
-                theMovieDbItem = this.getTmdbMovieInfo(item.getTheMovieDb().getMovie());
+                theMovieDbItem = this.getTmdbMovieInfo(item.getTheMovieDb().getMovie().getFirst());
+                // TODO: (at some point) I would need to gather the TMDB Info for each of those IDs
+                // Technically since the item.getTheMovieDb.getMovie() returns a list, I would need to get the info
+                // for each of those IDs, but since they are not the same ID, they will not be "the same thing"
+                // this should be fine for now
             } else if (tmdbTvId) {
                 // we have an ID that is a TV Show
                 theMovieDbItem = this.getTmdbTvInfo(item.getTheMovieDb().getTv());
@@ -184,12 +196,29 @@ public class TheMovieDBService {
             StringJoiner updates = new StringJoiner(", ");
 
             if (theMovieDbItem.getImdb() != null) {
-                item.setImdb(theMovieDbItem.getImdb());
-                updates.add(String.format("IMDB ID: [%s->%s]", item.getImdb(), theMovieDbItem.getImdb()));
+
+                List<String> imdbIds = item.getImdb() == null
+                        ? new ArrayList<>()
+                        : new ArrayList<>(item.getImdb());
+
+                if (!imdbIds.contains(theMovieDbItem.getImdb())) {
+                    List<String> oldImdbIds = item.getImdb() == null
+                            ? List.of()
+                            : item.getImdb();
+
+                    imdbIds.add(theMovieDbItem.getImdb());
+                    item.setImdb(imdbIds);
+
+                    updates.add(String.format("IMDB ID: [%s->%s]", oldImdbIds, imdbIds));
+                } else if (item.getImdb() != imdbIds) {
+                    item.setImdb(imdbIds);
+                }
             }
             if (theMovieDbItem.getTvdb() != null) {
+                // save the old TVDB ID, so we can log it, and we know that it changed
+                Integer oldTvdbId = item.getTvdb();
                 item.setTvdb(theMovieDbItem.getTvdb());
-                updates.add(String.format("TVDB ID: [%s->%s]", item.getTvdb(), theMovieDbItem.getTvdb()));
+                updates.add(String.format("TVDB ID: [%s->%s]", oldTvdbId, theMovieDbItem.getTvdb()));
             }
 
             if (updates.length() > 0) {

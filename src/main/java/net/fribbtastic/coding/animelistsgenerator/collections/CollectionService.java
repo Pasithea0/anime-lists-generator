@@ -73,8 +73,7 @@ public class CollectionService {
                 }
 
                 graphs.computeIfAbsent(source, s -> new SimpleGraph<>(DefaultEdge.class));
-                String id = anime.getIdForSource(source);
-                if(id != null) {
+                for (String id : anime.getIdForSource(source)) {
                     lookup.computeIfAbsent(source, s -> new HashMap<>()).put(id, anime);
                 }
             }
@@ -96,19 +95,22 @@ public class CollectionService {
                 }
 
                 Graph<String, DefaultEdge> graph = graphs.get(source);
-                String selfId = anime.getIdForSource(source);
-                if (graph == null || selfId == null) {
+                List<String> selfIds = anime.getIdForSource(source);
+                if (graph == null || selfIds == null) {
                     continue;
                 }
 
-                graph.addVertex(selfId);
+                selfIds.forEach(graph::addVertex);
 
                 for (String relationId : entry.getValue()) {
                     graph.addVertex(relationId);
 
-                    if (this.isMutualRelation(lookup.get(source), selfId, relationId)) {
-                        if (!selfId.equals(relationId)) {
-                            graph.addEdge(selfId, relationId);
+                    for (String selfId : selfIds) {
+                        if (isMutualRelation(lookup.get(source), selfId, relationId)) {
+                            if (!selfId.equals(relationId))
+                            {
+                                graph.addEdge(selfId, relationId);
+                            }
                         }
                     }
                 }

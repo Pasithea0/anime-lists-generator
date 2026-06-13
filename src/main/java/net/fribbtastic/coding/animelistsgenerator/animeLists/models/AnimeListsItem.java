@@ -42,7 +42,7 @@ public class AnimeListsItem {
 
     /**
      * The tmdbid can sometimes be a String
-     * because it contains a coma separated list ("145675,210227") instead of a single Integer ID
+     * because it contains a coma-separated list ("145675,210227") instead of a single Integer ID
      */
     @JacksonXmlProperty(isAttribute = true)
     private String tmdbid;

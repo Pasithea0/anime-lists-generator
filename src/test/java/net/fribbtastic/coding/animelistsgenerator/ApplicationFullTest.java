@@ -61,7 +61,7 @@ class ApplicationFullTest {
 		Assertions.assertThat(mergedList.getFirst().getMyanimelist()).isEqualTo(290);
 		Assertions.assertThat(mergedList.getFirst().getSimkl()).isEqualTo(36462);
 		Assertions.assertThat(mergedList.getFirst().getTvdb()).isEqualTo(72025);
-		Assertions.assertThat(mergedList.getFirst().getTheMovieDb()).isEqualTo(26209);
+		Assertions.assertThat(mergedList.getFirst().getTheMovieDb().getTv()).isEqualTo(26209);
 
 		//theMovieDBService.appendMissingIds(mergedList);
 

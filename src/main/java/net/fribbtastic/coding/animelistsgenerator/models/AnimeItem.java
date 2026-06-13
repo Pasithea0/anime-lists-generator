@@ -10,10 +10,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author Frederic Eßer
@@ -53,7 +50,7 @@ public class AnimeItem {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("imdb_id")
-    private String imdb;
+    private List<String> imdb;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("kitsu_id")
@@ -122,7 +119,7 @@ public class AnimeItem {
         animeItem.setAnidb(item.getAnidbid());
 
         // set the IMDB ID
-        animeItem.setImdb(item.getImdbid());
+        animeItem.setImdb(parseImdbId(item.getImdbid()));
 
         // set the TMDB ID
         /*
@@ -135,7 +132,7 @@ public class AnimeItem {
             tmdbItem = new TheMovieDBItem();
 
             if (item.getTmdbid() != null) {
-                tmdbItem.setMovie(parseStringToInteger(item.getAnidbid(),"tmdb id", item.getTmdbid()));
+                tmdbItem.setMovie(parseTheMovieDb(item.getAnidbid(), item.getTmdbid()));
             }
             if (item.getTmdbtv() != null) {
                 tmdbItem.setTv(item.getTmdbtv());
@@ -174,6 +171,45 @@ public class AnimeItem {
     }
 
     /**
+     * parse the TMDB ID from the anime-lists source to a List of Integers
+     *
+     * @param itemId        the ID of the item, for logging purposes
+     * @param stringToParse the ID as a String that should be parsed
+     * @return the parsed TMDB ID as a List of Integers
+     */
+    private static List<Integer> parseTheMovieDb(Integer itemId, String stringToParse) {
+        if (stringToParse == null || stringToParse.isBlank()) {
+            return null;
+        }
+
+        List<Integer> result = Arrays.stream(stringToParse.split(","))
+                .map(String::trim)
+                .filter(id -> !id.isBlank())
+                .map(id -> parseStringToInteger(itemId, "tmdb id", id))
+                .filter(Objects::nonNull)
+                .toList();
+
+        return result.isEmpty() ? null : result;
+    }
+
+    /**
+     * parse the IMDB ID from the anime-lists source to a List of Strings
+     *
+     * @param imdbid the IMDB ID from the anime-lists source
+     * @return the parsed IMDB ID as a List of Strings
+     */
+    private static List<String> parseImdbId(String imdbid) {
+        if (imdbid == null || imdbid.isBlank()) {
+            return null;
+        }
+
+        return Arrays.stream(imdbid.split(","))
+                .map(String::trim)
+                .filter(s -> !s.isBlank())
+                .toList();
+    }
+
+    /**
      * parse the ID as a string to an Integer
      *
      * @param itemId the ID of the item, for logging purposes
@@ -201,13 +237,7 @@ public class AnimeItem {
         if (this.animeNewsNetwork == null) this.animeNewsNetwork = other.getAnimeNewsNetwork();
         if (this.animePlanet == null) this.animePlanet = other.getAnimePlanet();
         if (this.anisearch == null) this.anisearch = other.getAnisearch();
-        // The IMDB ID from the anime-lists source can be a comma-separated list
-        // If this is the case, we ignore it and instead rely on the TMDB API to provide it through the external IDs instead
-        if (this.imdb == null) {
-            if (other.getImdb() != null && !other.getImdb().contains(",")) {
-                this.imdb = other.getImdb();
-            }
-        }
+        if (this.imdb == null) this.imdb = other.getImdb();
         if (this.kitsu == null) this.kitsu = other.getKitsu();
         if (this.livechart == null) this.livechart = other.getLivechart();
         if (this.myanimelist == null) this.myanimelist = other.getMyanimelist();
@@ -253,8 +283,8 @@ public class AnimeItem {
         }
 
         if (this.theMovieDb.getMovie() != null) {
-            map.computeIfAbsent("themoviedb", ignored -> new ArrayList<>())
-                    .add("movie:" + this.theMovieDb.getMovie());
+            this.theMovieDb.getMovie().forEach(movieId -> map.computeIfAbsent("themoviedb", ignored -> new ArrayList<>())
+                    .add("movie:" + movieId));
         }
 
         if (this.theMovieDb.getTv() != null) {
@@ -263,39 +293,41 @@ public class AnimeItem {
         }
     }
 
-    public String getIdForSource(String source) {
+    public List<String> getIdForSource(String source) {
         return switch (source) {
-            case "anidb" -> this.anidb != null ? this.anidb.toString() : null;
-            case "anilist" -> this.anilist != null ? this.anilist.toString() : null;
-            case "animecountdown" -> this.animeCountdown != null ? this.animeCountdown.toString() : null;
-            case "animenewsnetwork" -> this.animeNewsNetwork != null ? this.animeNewsNetwork.toString() : null;
-            case "anime-planet" -> this.animePlanet != null ? this.animePlanet : null;
-            case "anisearch" -> this.anisearch != null ? this.anisearch.toString() : null;
-            case "imdb" -> this.imdb != null ? this.imdb : null;
-            case "kitsu" -> this.kitsu != null ? this.kitsu.toString() : null;
-            case "livechart" -> this.livechart != null ? this.livechart.toString() : null;
-            case "mal" -> this.myanimelist != null ? this.myanimelist.toString() : null;
-            case "simkl" -> this.simkl != null ? this.simkl.toString() : null;
+            case "anidb" -> this.anidb != null ? List.of(this.anidb.toString()) : List.of();
+            case "anilist" -> this.anilist != null ? List.of(this.anilist.toString()) : List.of();
+            case "animecountdown" -> this.animeCountdown != null ? List.of(this.animeCountdown.toString()) : List.of();
+            case "animenewsnetwork" -> this.animeNewsNetwork != null ? List.of(this.animeNewsNetwork.toString()) : List.of();
+            case "anime-planet" -> this.animePlanet != null ? List.of(this.animePlanet) : List.of();
+            case "anisearch" -> this.anisearch != null ? List.of(this.anisearch.toString()) : List.of();
+            case "imdb" -> this.imdb != null ? this.imdb : List.of();
+            case "kitsu" -> this.kitsu != null ? List.of(this.kitsu.toString()) : List.of();
+            case "livechart" -> this.livechart != null ? List.of(this.livechart.toString()) : List.of();
+            case "mal" -> this.myanimelist != null ? List.of(this.myanimelist.toString()) : List.of();
+            case "simkl" -> this.simkl != null ? List.of(this.simkl.toString()) : List.of();
             case "themoviedb" -> this.getTheMovieDbIndexId();
-            case "tvdb" -> this.tvdb != null ? this.tvdb.toString() : null;
+            case "tvdb" -> this.tvdb != null ? List.of(this.tvdb.toString()) : List.of();
             default -> throw new IllegalStateException("Unexpected value: " + source);
         };
     }
 
     @JsonIgnore
-    private String getTheMovieDbIndexId() {
+    private List<String> getTheMovieDbIndexId() {
         if (this.theMovieDb == null) {
-            return null;
+            return List.of();
         }
 
+        List<String> result = new ArrayList<>();
+
         if (this.theMovieDb.getMovie() != null) {
-            return "movie:" + this.theMovieDb.getMovie();
+            this.theMovieDb.getMovie().forEach(movieId -> result.add("movie:" + movieId));
         }
 
         if (this.theMovieDb.getTv() != null) {
-            return "tv:" + this.theMovieDb.getTv();
+            result.add("tv:" + this.theMovieDb.getTv());
         }
 
-        return null;
+        return result;
     }
 }
