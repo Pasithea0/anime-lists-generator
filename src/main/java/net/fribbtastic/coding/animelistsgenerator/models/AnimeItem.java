@@ -80,6 +80,10 @@ public class AnimeItem {
     @JsonProperty("season")
     private Season season;
 
+    @JsonInclude(value = JsonInclude.Include.CUSTOM, valueFilter = EpisodeOffsetFilter.class)
+    @JsonProperty("episode_offset")
+    private EpisodeOffset episodeOffset;
+
     @JsonIgnore
     private transient Map<String, List<String>> relations;
 
@@ -167,6 +171,21 @@ public class AnimeItem {
         // add season to anime item
         animeItem.setSeason(season);
 
+        // add the episode Offset
+        if (item.getEpisodeoffset() != null || item.getTmdboffset() != null) {
+            EpisodeOffset episodeOffset = new EpisodeOffset();
+
+            if (item.getEpisodeoffset() != null) {
+                episodeOffset.setThetvdb(parseStringToInteger(item.getAnidbid(), "tvdb episode offset", item.getEpisodeoffset()));
+            }
+
+            if (item.getTmdboffset() != null) {
+                episodeOffset.setTheMovieDb(parseStringToInteger(item.getAnidbid(), "tmdb episode offset", item.getTmdboffset()));
+            }
+
+            animeItem.setEpisodeOffset(episodeOffset);
+        }
+
         return animeItem;
     }
 
@@ -244,10 +263,8 @@ public class AnimeItem {
         if (this.simkl == null) this.simkl = other.getSimkl();
         if (this.theMovieDb == null) this.theMovieDb = other.getTheMovieDb();
         if (this.tvdb == null) this.tvdb = other.getTvdb();
-
-        if (this.season == null) {
-            this.season = other.getSeason();
-        }
+        if (this.season == null) this.season = other.getSeason();
+        if (this.episodeOffset == null) this.episodeOffset = other.getEpisodeOffset();
     }
 
     @JsonIgnore

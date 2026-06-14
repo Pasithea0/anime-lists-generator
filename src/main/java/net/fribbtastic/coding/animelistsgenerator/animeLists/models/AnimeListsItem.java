@@ -49,4 +49,16 @@ public class AnimeListsItem {
 
     @JacksonXmlProperty(isAttribute = true)
     private String imdbid;
+
+    /**
+     * Episode Offset for the TheTVDB
+     */
+    @JacksonXmlProperty(isAttribute = true)
+    private String episodeoffset;
+
+    /**
+     * Episode Offset for the TheMovieDB
+     */
+    @JacksonXmlProperty(isAttribute = true)
+    private String tmdboffset;
 }

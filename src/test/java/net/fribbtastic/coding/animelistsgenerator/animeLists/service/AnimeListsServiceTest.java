@@ -37,6 +37,14 @@ class AnimeListsServiceTest {
         Assertions.assertThat(list.getFirst().getTheMovieDb()).isNotNull();
         Assertions.assertThat(list.getFirst().getTheMovieDb().getMovie()).isNull();
         Assertions.assertThat(list.getFirst().getTheMovieDb().getTv()).isEqualTo(26209);
+
+        Assertions.assertThat(list.get(45)).isNotNull();
+        Assertions.assertThat(list.get(45).getAnidb()).isEqualTo(49);
+        Assertions.assertThat(list.get(45).getTvdb()).isEqualTo(70861);
+        Assertions.assertThat(list.get(45).getTheMovieDb().getTv()).isEqualTo(30992);
+        Assertions.assertThat(list.get(45).getSeason().getThetvdb()).isEqualTo(0);
+        Assertions.assertThat(list.get(45).getEpisodeOffset().getThetvdb()).isEqualTo(2);
+        Assertions.assertThat(list.get(45).getEpisodeOffset().getTheMovieDb()).isEqualTo(2);
     }
 
 }
