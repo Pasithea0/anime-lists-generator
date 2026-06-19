@@ -1,0 +1,53 @@
+name: Generate Anime Lists
+
+on:
+  schedule:
+    - cron: '0 6 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: temurin
+          cache: maven
+
+      - name: Create application.properties
+        run: |
+          mkdir -p src/main/resources
+          cat > src/main/resources/application.properties << 'EOF'
+          spring.application.name=anime-lists-generator
+          project.path=${{ github.workspace }}/data
+          project.apikey.themoviedb=${{ secrets.TMDB_API_KEY }}
+          EOF
+
+      - name: Build with Maven
+        run: mvn -B package -DskipTests
+
+      - name: Run generator
+        run: java -jar target/anime-lists-generator-*.jar --spring.profiles.active=prod
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -d data ] && [ "$(ls -A data 2>/dev/null)" ]; then
+            git add data/
+            if git diff --staged --quiet; then
+              echo "No changes to commit"
+            else
+              git commit -m "chore: update generated anime lists"
+              git push
+            fi
+          else
+            echo "No data directory or empty - nothing to commit"
+          fi
