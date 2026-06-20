@@ -54,7 +54,7 @@ A Go package for looking up anime by MyAnimeList (MAL) ID, returning the corresp
 ### Usage as a Library
 
 ```go
-import "github.com/Fribb/anime-lists-generator/go/anime"
+import "github.com/Pasithea0/anime-lists-generator/go/anime"
 
 lookup, err := anime.NewLookup("data/anime-list-full.json")
 if err != nil {
