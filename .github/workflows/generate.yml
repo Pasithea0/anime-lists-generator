@@ -36,7 +36,10 @@ jobs:
         run: mvn -B package -DskipTests
 
       - name: Run generator
-        run: java -jar target/anime-lists-generator-*.jar --spring.profiles.active=prod
+        run: |
+          java -jar target/anime-lists-generator-*.jar \
+            --spring.profiles.active=prod \
+            --project.apikey.themoviedb="${{ secrets.TMDB_API_KEY }}"
 
       - name: Commit generated files
         run: |
