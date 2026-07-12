@@ -282,7 +282,7 @@
   "ids" : [ 6791, 7396, 7621, 7909, 8024, 9306, 11074, 11075 ]
 }, {
   "name" : "DD Hokuto no Ken (2013)",
-  "ids" : [ 809, 1661, 4523, 6310, 6672, 6822, 7006, 8239, 8251, 8265, 8281, 8284, 8301, 12325, 13316 ]
+  "ids" : [ 809, 1661, 4523, 6310, 6672, 6822, 7006, 8239, 8251, 8265, 8281, 8284, 8301, 12325, 13316, 13663 ]
 }, {
   "name" : "Cutie Honey Universe",
   "ids" : [ 3022, 5594, 5780, 7239, 8164, 8205 ]
@@ -473,7 +473,7 @@
   "name" : "Dirty Pair",
   "ids" : [ 5865, 6613, 7004, 7244, 7262, 7825, 8388, 8390, 11240 ]
 }, {
-  "name" : "Zone of the Enders: Dolores, I",
+  "name" : "Z.O.E Dolores, I",
   "ids" : [ 6103, 6723 ]
 }, {
   "name" : "To Heart 2",
@@ -740,6 +740,9 @@
   "name" : "Sora wo Miageru Shoujo no Hitomi ni Utsuru Sekai",
   "ids" : [ 4252, 5815, 5904, 6225 ]
 }, {
+  "name" : "Future GPX Cyber Formula",
+  "ids" : [ 8297, 8402, 8403, 8404, 8406, 13604 ]
+}, {
   "name" : "Sasami 14: Mahou Shoujo Pretty Sammy",
   "ids" : [ 2558, 6525, 8799 ]
 }, {
@@ -950,6 +953,9 @@
   "name" : "Dragon Ball Movie 4: Saikyou e no Michi",
   "ids" : [ 4831 ]
 }, {
+  "name" : "Soukou Kihei Votoms",
+  "ids" : [ 4892, 6497, 6839, 6913, 7666, 8452, 10285, 10797, 10798, 13481, 13696, 13697, 13703 ]
+}, {
   "name" : "Bakusou Kyoudai Let's & Go WGP",
   "ids" : [ 6966, 7563, 10931, 10932, 10933 ]
 }, {
@@ -1108,9 +1114,6 @@
 }, {
   "name" : "Choujuu Kishin Dancougar",
   "ids" : [ 6712, 6988, 7184, 7646, 7746 ]
-}, {
-  "name" : "Soukou Kihei Votoms",
-  "ids" : [ 4892, 6497, 6839, 6913, 7666, 10285, 10797, 10798, 13481 ]
 }, {
   "name" : "Love♥Love?",
   "ids" : [ 7002, 11950 ]
@@ -1491,7 +1494,7 @@
   "ids" : [ 5333, 5607 ]
 }, {
   "name" : "Duel Masters VS",
-  "ids" : [ 503, 1374, 1519, 2005, 2075, 2547, 3154, 6826, 7230, 7488, 8568, 11011, 11012, 11013, 12633, 12634 ]
+  "ids" : [ 503, 1374, 1519, 2005, 2075, 6826, 7230, 7488, 8568, 11011, 11012, 11013, 12633, 12634, 13614, 13615 ]
 }, {
   "name" : "Ohayou! Spank",
   "ids" : [ 12167, 12168 ]
@@ -1626,7 +1629,7 @@
   "ids" : [ 7874 ]
 }, {
   "name" : "Higurashi no Naku Koro ni Kaku: Outbreak",
-  "ids" : [ 108, 3604, 3675, 3855, 3996, 4121, 4880, 9758, 10473 ]
+  "ids" : [ 108, 3604, 3675, 3855, 3996, 4121, 4880, 9758, 10473, 13677 ]
 }, {
   "name" : "Ganbare! Marine Kid",
   "ids" : [ 11639, 11640, 11641 ]
@@ -1650,7 +1653,7 @@
   "ids" : [ 3869, 5016 ]
 }, {
   "name" : "Kamen Rider SD Kaiki?! Kumo Otoko",
-  "ids" : [ 7832, 8405, 9047, 10072, 10510, 10547, 11178, 12731 ]
+  "ids" : [ 7832, 8405, 9047, 10072, 10510, 10547, 11178, 12731, 13593 ]
 }, {
   "name" : "Crayon Shin-chan Manatsu no Yoru ni Ora Sanjou! Arashi wo Yobu Den-O vs. Shin-O 60-pun Special!!",
   "ids" : [ 8553 ]
@@ -1753,6 +1756,9 @@
 }, {
   "name" : "Clannad",
   "ids" : [ 3581, 3588, 3657, 3681, 3822 ]
+}, {
+  "name" : "Night Head Genesis",
+  "ids" : [ 6587, 10211 ]
 }, {
   "name" : "Meitantei Conan OVA 06: Kieta Daiya wo Oe! Conan & Heiji VS Kid!",
   "ids" : [ 6073 ]
@@ -2025,7 +2031,7 @@
   "ids" : [ 8170 ]
 }, {
   "name" : "Shimajirou no Wow! Movie 2: Shimajirou to Kujira no Uta",
-  "ids" : [ 350, 1908, 2402, 2964, 8227, 9659, 10106, 11122, 11559, 12069, 12105, 12231, 12442, 12898 ]
+  "ids" : [ 350, 1908, 2402, 2964, 8227, 9659, 10106, 11122, 11559, 12069, 12105, 12231, 12442, 12898, 13619 ]
 }, {
   "name" : "Myself; Yourself",
   "ids" : [ 3749, 5877 ]
@@ -2091,7 +2097,7 @@
   "ids" : [ 300, 3245 ]
 }, {
   "name" : "DC Super Heroes vs Taka no Tsumedan",
-  "ids" : [ 2710, 2923, 4953, 12242, 12682 ]
+  "ids" : [ 2710, 2923, 4953, 12242, 12682, 13689 ]
 }, {
   "name" : "Noramimi",
   "ids" : [ 10075, 10076 ]
@@ -2847,7 +2853,7 @@
   "ids" : [ 1239, 1562, 2638, 2639 ]
 }, {
   "name" : "Hidan no Aria AA",
-  "ids" : [ 1331, 1528, 3913 ]
+  "ids" : [ 1331, 1528, 3913, 13603 ]
 }, {
   "name" : "Crayon Shin-chan Movie 19: Arashi wo Yobu Ougon no Spy Daisakusen",
   "ids" : [ 8599 ]
@@ -2925,7 +2931,7 @@
   "ids" : [ 463, 768, 1670, 1887, 2396, 2513, 3121, 10251, 13148 ]
 }, {
   "name" : "King of Prism by Pretty Rhythm",
-  "ids" : [ 1857, 2323, 3333, 8221, 9233, 9234, 9235, 9640, 12602, 12937 ]
+  "ids" : [ 1857, 2323, 3333, 8221, 9233, 9234, 9235, 9640, 12602, 12937, 13702 ]
 }, {
   "name" : "Uta no☆Prince-sama♪ Maji Love 2000%: Shining Star Xmas",
   "ids" : [ 167, 341, 843, 1231, 1681, 2487, 10493, 10911, 12827 ]
@@ -3081,7 +3087,7 @@
   "ids" : [ 979, 1095, 1858, 4180 ]
 }, {
   "name" : "Sword Art Online: Extra Edition",
-  "ids" : [ 186, 391, 392, 1017, 1038, 1750, 1859, 2908, 2909, 3148, 9404, 9733, 10159, 10864, 11599, 12265, 13542 ]
+  "ids" : [ 186, 391, 392, 1017, 1038, 1750, 1859, 2908, 2909, 3148, 9404, 9733, 10159, 10864, 12265, 13542 ]
 }, {
   "name" : "Senki Zesshou Symphogear G",
   "ids" : [ 24, 275, 359, 1161, 1933, 2052, 2053, 5661, 9694, 12434 ]
@@ -3564,7 +3570,7 @@
   "ids" : [ 94, 366 ]
 }, {
   "name" : "Diamond no Ace",
-  "ids" : [ 63, 701, 1426, 2040, 8367, 12666 ]
+  "ids" : [ 63, 701, 1426, 2040, 8367, 12666, 13701 ]
 }, {
   "name" : "Sidonia no Kishi",
   "ids" : [ 155, 642, 1303, 10056 ]
@@ -3675,7 +3681,7 @@
   "ids" : [ 266, 4641 ]
 }, {
   "name" : "Mahouka Koukou no Rettousei",
-  "ids" : [ 265, 2068, 4551, 5068, 9626, 10295, 10439, 11006, 12728 ]
+  "ids" : [ 265, 2068, 4551, 5068, 9626, 10295, 10439, 11006, 12728, 13658 ]
 }, {
   "name" : "Harmonie",
   "ids" : [ 327, 328, 329, 330 ]
@@ -4359,7 +4365,7 @@
   "ids" : [ 447, 2009, 2212, 6540 ]
 }, {
   "name" : "Youjo Senki",
-  "ids" : [ 2015, 2509, 3041, 4405, 10651, 10652 ]
+  "ids" : [ 2015, 2509, 3041, 4405, 10651, 10652, 13660 ]
 }, {
   "name" : "Bananya",
   "ids" : [ 2018, 9559, 12809 ]
@@ -4655,6 +4661,9 @@
   "name" : "Gan Gan Ganko-chan",
   "ids" : [ 2453, 3068 ]
 }, {
+  "name" : "Death March kara Hajimaru Isekai Kyousoukyoku",
+  "ids" : [ 2444, 13643 ]
+}, {
   "name" : "Inazma Delivery",
   "ids" : [ 11059, 11060 ]
 }, {
@@ -4702,6 +4711,9 @@
 }, {
   "name" : "Sore Ike! Anpanman: Buruburu no Takarasagashi Daibouken!",
   "ids" : [ 2540 ]
+}, {
+  "name" : "Duel Masters (2017)",
+  "ids" : [ 2547 ]
 }, {
   "name" : "The iDOLM@STER SideM",
   "ids" : [ 2549 ]
@@ -4764,7 +4776,7 @@
   "ids" : [ 2687, 3446, 9405, 9665, 9666, 13478 ]
 }, {
   "name" : "Youkoso Jitsuryoku Shijou Shugi no Kyoushitsu e",
-  "ids" : [ 2688, 11092, 11116, 12814 ]
+  "ids" : [ 2688, 11092, 11116, 12814, 13685 ]
 }, {
   "name" : "Seizei Ganbare! Mahou Shoujo Kurumi",
   "ids" : [ 2689, 10070, 10071 ]
@@ -4779,7 +4791,7 @@
   "ids" : [ 2698 ]
 }, {
   "name" : "Quanzhi Fashi",
-  "ids" : [ 3997, 4539, 8103, 9994, 10744, 12252 ]
+  "ids" : [ 3997, 4539, 8103, 9994, 10744, 12252, 13644 ]
 }, {
   "name" : "Toji no Miko",
   "ids" : [ 2699, 8354, 8670, 9723 ]
@@ -4858,6 +4870,9 @@
 }, {
   "name" : "Hakumei to Mikochi",
   "ids" : [ 2828, 3047 ]
+}, {
+  "name" : "Sirotan: Shirotan ga Ippai!",
+  "ids" : [ 8328, 13566 ]
 }, {
   "name" : "Pingu in the City",
   "ids" : [ 2847, 3498 ]
@@ -4943,11 +4958,14 @@
   "name" : "Tales of the Rays Gekijou",
   "ids" : [ 3019 ]
 }, {
+  "name" : "Tanuki to Kitsune",
+  "ids" : [ 7379, 13577 ]
+}, {
   "name" : "Precure Super Stars! Movie",
   "ids" : [ 3043 ]
 }, {
   "name" : "Iya na Kao sare nagara Opantsu Misete Moraitai",
-  "ids" : [ 3031, 3461 ]
+  "ids" : [ 3031, 3461, 13606 ]
 }, {
   "name" : "Sore Ike! Anpanman: Kagayake! Kurun to Inochi no Hoshi",
   "ids" : [ 3040 ]
@@ -4968,7 +4986,7 @@
   "ids" : [ 3056, 3329, 4259 ]
 }, {
   "name" : "Isekai Maou to Shoukan Shoujo no Dorei Majutsu",
-  "ids" : [ 3061, 9882, 10485 ]
+  "ids" : [ 3061, 9882, 10485, 13598 ]
 }, {
   "name" : "Radiant",
   "ids" : [ 3064, 9242 ]
@@ -4996,6 +5014,9 @@
 }, {
   "name" : "Seishun Buta Yarou wa Bunny Girl Senpai no Yume wo Minai",
   "ids" : [ 3147, 3513, 8711, 11520, 11695, 12437, 13341 ]
+}, {
+  "name" : "Duel Masters!",
+  "ids" : [ 3154 ]
 }, {
   "name" : "Muhyo to Rouji no Mahouritsu Soudan Jimusho",
   "ids" : [ 3155, 9470 ]
@@ -5085,7 +5106,7 @@
   "ids" : [ 3445, 11355 ]
 }, {
   "name" : "5-toubun no Hanayome",
-  "ids" : [ 3448, 9428, 10488, 11921, 12646 ]
+  "ids" : [ 3448, 9428, 10488, 11921, 12646, 13625, 13627 ]
 }, {
   "name" : "Kabukichou Sherlock",
   "ids" : [ 3458, 9887 ]
@@ -5166,7 +5187,7 @@
   "ids" : [ 8229 ]
 }, {
   "name" : "Dorohedoro",
-  "ids" : [ 8350, 9766, 12492 ]
+  "ids" : [ 8350, 9766, 12492, 13646 ]
 }, {
   "name" : "Precure Miracle Universe Movie",
   "ids" : [ 8154 ]
@@ -5472,7 +5493,7 @@
   "ids" : [ 9706, 11360, 12182 ]
 }, {
   "name" : "Kanojo, Okarishimasu",
-  "ids" : [ 9707, 10168, 10568, 11316, 11511, 12290, 12506, 12753, 13018 ]
+  "ids" : [ 9707, 10168, 10568, 11316, 11511, 12290, 12506, 12753, 13018, 13692 ]
 }, {
   "name" : "Stand By Me Doraemon 2",
   "ids" : [ 9712 ]
@@ -5625,7 +5646,7 @@
   "ids" : [ 9485, 10045 ]
 }, {
   "name" : "Cardfight!! Vanguard: overDress",
-  "ids" : [ 10077, 10356, 10786, 10787, 11255, 11774, 11775, 11776, 11777, 13360 ]
+  "ids" : [ 10077, 10356, 10786, 10787, 11255, 11774, 11775, 11776, 11777, 13360, 13599 ]
 }, {
   "name" : "Tian Guan Cifu",
   "ids" : [ 9881, 10230, 10893 ]
@@ -5662,6 +5683,9 @@
 }, {
   "name" : "Wan Guo Zhi",
   "ids" : [ 10160, 10161 ]
+}, {
+  "name" : "Uchuu Nanchara Kotetsu-kun",
+  "ids" : [ 10148, 13684 ]
 }, {
   "name" : "Cap Kakumei Bottleman",
   "ids" : [ 10152, 11110 ]
@@ -5745,7 +5769,7 @@
   "ids" : [ 10276, 11211 ]
 }, {
   "name" : "Shuumatsu no Walküre",
-  "ids" : [ 10281, 10720, 10754, 11958, 13083 ]
+  "ids" : [ 10281, 10720, 10754, 11958, 13083, 13693 ]
 }, {
   "name" : "Mouseman: Ai no Katamari",
   "ids" : [ 10115, 10770 ]
@@ -5884,6 +5908,9 @@
 }, {
   "name" : "Lupin III: Part 6",
   "ids" : [ 10605 ]
+}, {
+  "name" : "Biao Ren",
+  "ids" : [ 11200, 13694 ]
 }, {
   "name" : "Da Wang Rao Ming",
   "ids" : [ 11145, 12490 ]
@@ -6146,6 +6173,9 @@
   "name" : "Yoru wa Neko to Issho",
   "ids" : [ 11193, 11781, 12541 ]
 }, {
+  "name" : "Hyouken no Majutsushi ga Sekai wo Suberu",
+  "ids" : [ 11197, 13639 ]
+}, {
   "name" : "KJ File",
   "ids" : [ 11208, 11541 ]
 }, {
@@ -6213,7 +6243,7 @@
   "ids" : [ 11377, 12782, 13452 ]
 }, {
   "name" : "Punirunes",
-  "ids" : [ 11389, 12752, 13109 ]
+  "ids" : [ 11389, 12752, 13109, 13585 ]
 }, {
   "name" : "Eternity Memories",
   "ids" : [ 11686 ]
@@ -6264,7 +6294,7 @@
   "ids" : [ 11577, 12190 ]
 }, {
   "name" : "Boushoku no Berserk",
-  "ids" : [ 11567, 12349 ]
+  "ids" : [ 11567, 12349, 13616 ]
 }, {
   "name" : "Higeki no Genkyou to Naru Saikyou Gedou Last Boss Joou wa Tami no Tame ni Tsukushimasu.",
   "ids" : [ 11579, 12259, 13214 ]
@@ -6280,6 +6310,9 @@
 }, {
   "name" : "Sentai Daishikkaku",
   "ids" : [ 11714, 12732 ]
+}, {
+  "name" : "Sword Art Online (Original Movie)",
+  "ids" : [ 11599 ]
 }, {
   "name" : "Saijaku Tamer wa Gomi Hiroi no Tabi wo Hajimemashita.",
   "ids" : [ 11564, 13419 ]
@@ -6327,7 +6360,7 @@
   "ids" : [ 11736, 12410 ]
 }, {
   "name" : "Yozakura-san Chi no Daisakusen",
-  "ids" : [ 11637, 12628, 12872 ]
+  "ids" : [ 11637, 12628, 12872, 13700 ]
 }, {
   "name" : "Pokemon (2023)",
   "ids" : [ 11732 ]
@@ -6374,7 +6407,7 @@
   "name" : "Precure All Stars Movie F",
   "ids" : [ 11830 ]
 }, {
-  "name" : "WANDER BURABURA BAKKAMU",
+  "name" : "Wander Burabura Bakkamu",
   "ids" : [ 11846, 11847, 11848, 11849 ]
 }, {
   "name" : "Naruto (Shinsaku Anime)",
@@ -6463,6 +6496,9 @@
 }, {
   "name" : "Bokura no Ame-iro Protocol",
   "ids" : [ 12254, 12365 ]
+}, {
+  "name" : "The Fable",
+  "ids" : [ 12249, 13592 ]
 }, {
   "name" : "30-sai made Doutei dato Mahoutsukai ni Nareru Rashii",
   "ids" : [ 12263, 12470, 12616 ]
@@ -6573,7 +6609,7 @@
   "ids" : [ 12520 ]
 }, {
   "name" : "Tsue to Tsurugi no Wistoria",
-  "ids" : [ 12521, 12861 ]
+  "ids" : [ 12521, 12861, 13699 ]
 }, {
   "name" : "NEET Kunoichi to Nazeka Dousei Hajimemashita",
   "ids" : [ 12526, 13007 ]
@@ -6683,6 +6719,9 @@
   "name" : "A-Rank Party wo Ridatsu shita Ore wa, Moto Oshiego-tachi to Meikyuu Shinbu wo Mezasu.",
   "ids" : [ 12822, 13213 ]
 }, {
+  "name" : "Maebashi Witches",
+  "ids" : [ 12824, 13563 ]
+}, {
   "name" : "Chotto dake Ai ga Omoi Dark Elf ga Isekai kara Oikaketekita",
   "ids" : [ 12825, 13072 ]
 }, {
@@ -6720,7 +6759,7 @@
   "ids" : [ 12939, 13587 ]
 }, {
   "name" : "Kimi to Idol Precure♪",
-  "ids" : [ 12948 ]
+  "ids" : [ 12948, 13020 ]
 }, {
   "name" : "Lupin the IIIrd the Movie: Fujimi no Ketsuzoku",
   "ids" : [ 12949 ]
@@ -6734,14 +6773,14 @@
   "name" : "Hell Mode: Yarikomizuki no Gamer wa Hai Settei no Isekai de Musou suru",
   "ids" : [ 12959, 13578 ]
 }, {
+  "name" : "Takopii no Genzai",
+  "ids" : [ 12962, 13640 ]
+}, {
   "name" : "Vigilante: Boku no Hero Academia Illegals",
   "ids" : [ 12988, 13215 ]
 }, {
   "name" : "Sai-Kyo-Oh! Zukan: The Ultimate Battles",
   "ids" : [ 12493, 12983 ]
-}, {
-  "name" : "Kimi to Idol Precure♪ Movie: Omatase! Kimi ni Todokeru Kirakki Live!",
-  "ids" : [ 13020 ]
 }, {
   "name" : "Taiyou yori mo Mabushii Hoshi",
   "ids" : [ 13036, 13429 ]
@@ -6791,6 +6830,9 @@
   "name" : "Kaijuu Sekai Seifuku",
   "ids" : [ 12180, 12721 ]
 }, {
+  "name" : "Kanan-sama wa Akumade Choroi",
+  "ids" : [ 13143, 13676 ]
+}, {
   "name" : "Yu-Gi-Oh! Card Game: The Chronicles",
   "ids" : [ 12984 ]
 }, {
@@ -6803,7 +6845,10 @@
   "name" : "GANSO! BanG Dream Chan",
   "ids" : [ 13057 ]
 }, {
-  "name" : "Love Live! Hasu no Sora Jogakuin School Idol Club: Bloom Garden Party",
+  "name" : "Guimi Zhi Zhu: Xiaochou Pian",
+  "ids" : [ 13201, 13618 ]
+}, {
+  "name" : "Love Live! Hasunosora Jogakuin School Idol Club: Bloom Garden Party",
   "ids" : [ 13187, 13590 ]
 }, {
   "name" : "Towa no Yuugure",
@@ -6815,8 +6860,14 @@
   "name" : "Monogatari Series: Off & Monster Season (Shin Episode)",
   "ids" : [ 13221 ]
 }, {
+  "name" : "Kizu darake Seijo yori Houfuku wo Komete",
+  "ids" : [ 12856, 13631 ]
+}, {
   "name" : "Shuiro no Kamen",
   "ids" : [ 13231, 13574 ]
+}, {
+  "name" : "Snowball Earth",
+  "ids" : [ 13246, 13690 ]
 }, {
   "name" : "Isekai no Sata wa Shachiku Shidai",
   "ids" : [ 12904, 13473 ]
@@ -6824,11 +6875,17 @@
   "name" : "Kinnikuman: Kanpeki Choujin Shiso-hen Season 3",
   "ids" : [ 13261 ]
 }, {
+  "name" : "Akane-banashi",
+  "ids" : [ 13262, 13675 ]
+}, {
   "name" : "One Piece: Heroines",
   "ids" : [ 13271 ]
 }, {
   "name" : "Gintama Movie 3: Yoshiwara Daienjou",
   "ids" : [ 13282 ]
+}, {
+  "name" : "Kill Ao",
+  "ids" : [ 13301, 13695 ]
 }, {
   "name" : "BanG Dream! Yume∞Mita",
   "ids" : [ 13311 ]
@@ -6836,11 +6893,17 @@
   "name" : "Death Stranding: Mosquito",
   "ids" : [ 13334, 13388 ]
 }, {
+  "name" : "THE LENTICULARS",
+  "ids" : [ 13400, 13594 ]
+}, {
   "name" : "Doraemon Movie 45: Shin Nobita no Kaitei Kiganjou",
   "ids" : [ 13308 ]
 }, {
   "name" : "Meitantei Precure!",
-  "ids" : [ 13405 ]
+  "ids" : [ 13405, 13596 ]
+}, {
+  "name" : "Meitantei Conan: Hanamaru na Answer",
+  "ids" : [ 13661 ]
 }, {
   "name" : "Himitsu no AiPri Movie: Mankai Buzzlume Live!",
   "ids" : [ 13411 ]
@@ -6857,11 +6920,17 @@
   "name" : "BanG Dream! Ave Mujica: Prima Aurora",
   "ids" : [ 13275 ]
 }, {
-  "name" : "Yani Neko",
-  "ids" : [ 13505, 13529 ]
+  "name" : "Onegai AiPri",
+  "ids" : [ 13492 ]
 }, {
   "name" : "BanG Dream! It's MyGO!!!!! / Ave Mujica",
   "ids" : [ 13117 ]
+}, {
+  "name" : "Cardfight!! Vanguard (2027)",
+  "ids" : [ 13600 ]
+}, {
+  "name" : "Pan no Akachan",
+  "ids" : [ 13632, 13633 ]
 }, {
   "name" : "5-Okunen Button",
   "ids" : [ 11254, 12841 ]
@@ -6872,6 +6941,9 @@
   "name" : "Anpanman to Hajimeyou! Iro, Kazu, Katachi Wakaru ka na Iro, Katachi",
   "ids" : [ 11454 ]
 }, {
+  "name" : "Bananya: At-Home Party",
+  "ids" : [ 13705 ]
+}, {
   "name" : "BanG Dream! It's MyGO!!!!! Movie",
   "ids" : [ 12486 ]
 }, {
@@ -6881,17 +6953,17 @@
   "name" : "Bishoujo Senshi Sailor Moon Eternal Movie 2",
   "ids" : [ 2768 ]
 }, {
-  "name" : "Boku no Hero Academia 170+1 \"More\"",
-  "ids" : [ 13435 ]
+  "name" : "Black Channel (ONA)",
+  "ids" : [ 10134, 13601 ]
 }, {
   "name" : "Boku no Hero Academia the Movie 4: You're Next - A Piece of Cake",
   "ids" : [ 12947 ]
 }, {
-  "name" : "Bousei no Volicia: Dai-2 Shou - Gunjou",
-  "ids" : [ 13579 ]
+  "name" : "Boku no Hero Academia: I Am a Hero Too",
+  "ids" : [ 13626 ]
 }, {
-  "name" : "12258",
-  "ids" : [ 12258 ]
+  "name" : "Bousei no Volicia",
+  "ids" : [ 12258, 13579 ]
 }, {
   "name" : "Short Peace Opening",
   "ids" : [ 6139, 6429, 6544, 6615, 6638 ]
@@ -7064,11 +7136,17 @@
   "name" : "Hakumei no Tsubasa: Expansion - Hoshi no Matsuri",
   "ids" : [ 10195 ]
 }, {
+  "name" : "Haseo Sugoroku",
+  "ids" : [ 13670, 13671 ]
+}, {
   "name" : "Hisui Kobanashi",
   "ids" : [ 10946 ]
 }, {
   "name" : "Hitozuma no Kuchibiru wa Kan Chuuhai no Aji ga Shite",
   "ids" : [ 13045, 13185 ]
+}, {
+  "name" : "Hokuto no Ken -Fist of the North Star- Cour 2",
+  "ids" : [ 13691 ]
 }, {
   "name" : "Inferno Cop Specials",
   "ids" : [ 1663, 2724, 2725, 5758 ]
@@ -7256,11 +7334,17 @@
   "name" : "Monpoke",
   "ids" : [ 13049 ]
 }, {
+  "name" : "My Hero Academia 170+1: More",
+  "ids" : [ 13435 ]
+}, {
   "name" : "Nanashi Kaidan",
   "ids" : [ 11338, 12229, 12759 ]
 }, {
   "name" : "Neko Jockey",
   "ids" : [ 10545, 10821 ]
+}, {
+  "name" : "NIKKE: Old Tales Special Animation",
+  "ids" : [ 12938, 13634 ]
 }, {
   "name" : "Ninja Bugei-chou Pilot Film",
   "ids" : [ 11676, 11677 ]
@@ -7322,11 +7406,11 @@
   "name" : "One Piece: Straw Hat Theater",
   "ids" : [ 4906 ]
 }, {
-  "name" : "Onegai AIPRI",
-  "ids" : [ 13492 ]
-}, {
   "name" : "Oshiri Tantei (2026)",
   "ids" : [ 13380 ]
+}, {
+  "name" : "Osomatsu-san 4th Season: The Matsuno Ten",
+  "ids" : [ 13666 ]
 }, {
   "name" : "Osomatsu-san Shinsaku Short Anime",
   "ids" : [ 12828 ]
@@ -7397,10 +7481,7 @@
   "name" : "Pretty Guardian Sailor Moon Cosmos Movie 2",
   "ids" : [ 11199 ]
 }, {
-  "name" : "Punirunes: Puni 4",
-  "ids" : [ 13585 ]
-}, {
-  "name" : "Ranma ½ (2024) 3rd Season",
+  "name" : "Ranma1/2 3rd Season",
   "ids" : [ 13571 ]
 }, {
   "name" : "Re:Zero kara Hajimeru Break Time 3rd Season",
@@ -7430,12 +7511,6 @@
   "name" : "Sinbi Apartment: Ghost Ball Bimil",
   "ids" : [ 11583, 11584 ]
 }, {
-  "name" : "Sirotan (TV)",
-  "ids" : [ 13566 ]
-}, {
-  "name" : "8328",
-  "ids" : [ 8328 ]
-}, {
   "name" : "Sore Ike! Anpanman: Anpanman no Jin-Jin-Jingle Bells",
   "ids" : [ 11412 ]
 }, {
@@ -7463,12 +7538,6 @@
   "name" : "SpoGomi: World Cup Exhibition Match-hen",
   "ids" : [ 11350, 11947 ]
 }, {
-  "name" : "Tanuki to Kitsune",
-  "ids" : [ 13577 ]
-}, {
-  "name" : "7379",
-  "ids" : [ 7379 ]
-}, {
   "name" : "Teekyuu 8 Specials",
   "ids" : [ 6105 ]
 }, {
@@ -7477,12 +7546,6 @@
 }, {
   "name" : "Tezuka Osamu no Buddha: Owarinaki Tabi",
   "ids" : [ 281, 6761 ]
-}, {
-  "name" : "The Fable 2nd Season",
-  "ids" : [ 13592 ]
-}, {
-  "name" : "12249",
-  "ids" : [ 12249 ]
 }, {
   "name" : "The iDOLM@STER Cinderella Girls: U149 Special",
   "ids" : [ 11946 ]
@@ -7502,8 +7565,17 @@
   "name" : "The iDOLM@STER SideM: Wake Atte Mini! - Shoshi Kantetsu Daisouji!",
   "ids" : [ 3565 ]
 }, {
+  "name" : "The Zero Century: Emeraldas",
+  "ids" : [ 2778, 2779, 2780 ]
+}, {
   "name" : "Toho Cinemas x Pokemon Go",
   "ids" : [ 8540 ]
+}, {
+  "name" : "Tongari Boushi no Atelier 2nd Season",
+  "ids" : [ 13704 ]
+}, {
+  "name" : "11157",
+  "ids" : [ 11157 ]
 }, {
   "name" : "Towa no Quon 1: Utakata no Kaben",
   "ids" : [ 2748, 2749, 2750, 2751, 2752, 2753 ]
@@ -7523,9 +7595,12 @@
   "name" : "Wild Adapter: ZEN",
   "ids" : [ 137, 570 ]
 }, {
+  "name" : "Yami Shibai 17",
+  "ids" : [ 13674 ]
+}, {
+  "name" : "Yani Neko",
+  "ids" : [ 13505, 13529 ]
+}, {
   "name" : "Yubisaki kara Honki no Netsujou: Osananajimi wa Shouboushi",
   "ids" : [ 9449, 10362 ]
-}, {
-  "name" : "Zero Seiki Movie 1: Emeraldas",
-  "ids" : [ 2778, 2779, 2780 ]
 } ]
