@@ -29561,7 +29561,10 @@
     "tmdb" : 4
   }
 }, {
-  "anidb_id" : 5823
+  "anidb_id" : 5823,
+  "themoviedb_id" : {
+    "movie" : [ 443269 ]
+  }
 }, {
   "anidb_id" : 5829
 }, {
@@ -35363,7 +35366,11 @@
     "tmdb" : 1
   }
 }, {
-  "anidb_id" : 7340
+  "anidb_id" : 7340,
+  "imdb_id" : [ "tt21448334" ],
+  "themoviedb_id" : {
+    "movie" : [ 391643 ]
+  }
 }, {
   "anidb_id" : 7341
 }, {
@@ -52952,6 +52959,12 @@
     "movie" : [ 433156 ]
   }
 }, {
+  "anidb_id" : 11279,
+  "imdb_id" : [ "tt17518332" ],
+  "themoviedb_id" : {
+    "movie" : [ 433510 ]
+  }
+}, {
   "anidb_id" : 11284,
   "themoviedb_id" : {
     "tv" : 64754
@@ -55954,6 +55967,14 @@
 }, {
   "anidb_id" : 12054,
   "imdb_id" : [ "tt5595168" ]
+}, {
+  "anidb_id" : 12055,
+  "themoviedb_id" : {
+    "tv" : 241888
+  },
+  "season" : {
+    "tmdb" : 1
+  }
 }, {
   "anidb_id" : 12057,
   "themoviedb_id" : {
@@ -65530,6 +65551,16 @@
   "season" : {
     "tvdb" : 0,
     "tmdb" : 0
+  }
+}, {
+  "anidb_id" : 14730,
+  "themoviedb_id" : {
+    "tv" : 98865
+  },
+  "tvdb_id" : 475980,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
   }
 }, {
   "anidb_id" : 14733,
@@ -82243,6 +82274,12 @@
     "tmdb" : 2
   }
 }, {
+  "anidb_id" : 19073,
+  "imdb_id" : [ "tt35114460" ],
+  "themoviedb_id" : {
+    "movie" : [ 1406657 ]
+  }
+}, {
   "anidb_id" : 19075,
   "themoviedb_id" : {
     "tv" : 258579
@@ -83715,6 +83752,15 @@
     "tvdb" : 1
   }
 }, {
+  "anidb_id" : 19524,
+  "themoviedb_id" : {
+    "movie" : [ 1659389 ]
+  },
+  "tvdb_id" : 466748,
+  "season" : {
+    "tvdb" : 1
+  }
+}, {
   "anidb_id" : 19526,
   "themoviedb_id" : {
     "tv" : 298543
@@ -84543,6 +84589,12 @@
     "tmdb" : 1
   }
 }, {
+  "anidb_id" : 19807,
+  "imdb_id" : [ "tt39228706" ],
+  "themoviedb_id" : {
+    "movie" : [ 1598785 ]
+  }
+}, {
   "anidb_id" : 19808,
   "themoviedb_id" : {
     "tv" : 67063
@@ -85318,5 +85370,15 @@
   "season" : {
     "tvdb" : 2,
     "tmdb" : 2
+  }
+}, {
+  "anidb_id" : 20180,
+  "themoviedb_id" : {
+    "tv" : 326191
+  },
+  "tvdb_id" : 476227,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
   }
 } ]
