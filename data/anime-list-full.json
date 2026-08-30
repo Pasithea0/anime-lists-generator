@@ -15075,7 +15075,7 @@
   "animenewsnetwork_id" : 1759,
   "anime-planet_id" : "salaryman-kintaro",
   "anisearch_id" : 3459,
-  "imdb_id" : [ "tt0304664" ],
+  "imdb_id" : [ "" ],
   "kitsu_id" : 1447,
   "livechart_id" : 8433,
   "mal_id" : 1608,
@@ -17858,6 +17858,7 @@
   "animenewsnetwork_id" : 2931,
   "anime-planet_id" : "massugu-ni-ikou",
   "anisearch_id" : 1419,
+  "imdb_id" : [ "tt21319174" ],
   "kitsu_id" : 1452,
   "livechart_id" : 7593,
   "mal_id" : 1617,
@@ -34900,7 +34901,7 @@
   "animenewsnetwork_id" : 1045,
   "anime-planet_id" : "manga-aesop-monogatari",
   "anisearch_id" : 3191,
-  "imdb_id" : [ "" ],
+  "imdb_id" : [ "tt31458061" ],
   "kitsu_id" : 2842,
   "mal_id" : 3180,
   "simkl_id" : 37587,
@@ -35827,6 +35828,7 @@
   "animecountdown_id" : 41003,
   "anime-planet_id" : "massugu-ni-ikou-2004",
   "anisearch_id" : 1975,
+  "imdb_id" : [ "tt21319174" ],
   "kitsu_id" : 2843,
   "livechart_id" : 11284,
   "mal_id" : 3182,
@@ -63420,7 +63422,7 @@
   "animenewsnetwork_id" : 3398,
   "anime-planet_id" : "elf-17",
   "anisearch_id" : 4114,
-  "imdb_id" : [ "" ],
+  "imdb_id" : [ "tt5162492" ],
   "kitsu_id" : 5673,
   "livechart_id" : 7764,
   "mal_id" : 9324,
@@ -97361,6 +97363,7 @@
   "animenewsnetwork_id" : 12449,
   "anime-planet_id" : "honto-ni-atta-reibai-sensei",
   "anisearch_id" : 6875,
+  "imdb_id" : [ "tt3207762" ],
   "kitsu_id" : 6135,
   "livechart_id" : 1529,
   "mal_id" : 10338,
@@ -146898,7 +146901,6 @@
   "animecountdown_id" : 626753,
   "anime-planet_id" : "shelter",
   "anisearch_id" : 11871,
-  "imdb_id" : [ "tt6443118" ],
   "kitsu_id" : 12668,
   "livechart_id" : 2372,
   "mal_id" : 34240,
@@ -231305,6 +231307,7 @@
   "animenewsnetwork_id" : 38667,
   "anime-planet_id" : "junket-bank",
   "anisearch_id" : 21307,
+  "imdb_id" : [ "tt41295770" ],
   "kitsu_id" : 50587,
   "livechart_id" : 13549,
   "mal_id" : 63713,
@@ -232471,7 +232474,16 @@
   "anidb_id" : 20144
 }, {
   "type" : "TV",
-  "anidb_id" : 20145
+  "anidb_id" : 20145,
+  "imdb_id" : [ "tt32550889" ],
+  "themoviedb_id" : {
+    "tv" : 196950
+  },
+  "tvdb_id" : 418666,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 2
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 20147,
@@ -232555,7 +232567,16 @@
   }
 }, {
   "type" : "TV",
-  "anidb_id" : 20168
+  "anidb_id" : 20168,
+  "imdb_id" : [ "tt39123061" ],
+  "themoviedb_id" : {
+    "tv" : 283428
+  },
+  "tvdb_id" : 459627,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 2
+  }
 }, {
   "anidb_id" : 20180,
   "imdb_id" : [ "tt41358179" ],
@@ -232563,6 +232584,16 @@
     "tv" : 326191
   },
   "tvdb_id" : 476227,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
+}, {
+  "anidb_id" : 20203,
+  "themoviedb_id" : {
+    "tv" : 329161
+  },
+  "tvdb_id" : 480480,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
