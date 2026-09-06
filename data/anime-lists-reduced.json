@@ -84895,6 +84895,16 @@
     "tmdb" : 1
   }
 }, {
+  "anidb_id" : 19882,
+  "themoviedb_id" : {
+    "tv" : 123542
+  },
+  "tvdb_id" : 402033,
+  "season" : {
+    "tvdb" : 4,
+    "tmdb" : 4
+  }
+}, {
   "anidb_id" : 19889,
   "tvdb_id" : 473913,
   "season" : {
