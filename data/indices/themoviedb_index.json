@@ -203,6 +203,9 @@
   "movie:1126130" : {
     "anime-list" : [ 4565 ]
   },
+  "movie:1126318" : {
+    "anime-list" : [ 1794 ]
+  },
   "movie:1129610" : {
     "anime-list" : [ 14211 ]
   },
@@ -355,6 +358,9 @@
   },
   "movie:122583" : {
     "anime-list" : [ 6797 ]
+  },
+  "movie:122662" : {
+    "anime-list" : [ 5686 ]
   },
   "movie:1227707" : {
     "anime-list" : [ 5365 ]
@@ -758,6 +764,9 @@
   "movie:154501" : {
     "anime-list" : [ 1210 ]
   },
+  "movie:1545854" : {
+    "anime-list" : [ 8504 ]
+  },
   "movie:1551201" : {
     "anime-list" : [ 15426 ]
   },
@@ -848,11 +857,17 @@
   "movie:166690" : {
     "anime-list" : [ 3518 ]
   },
+  "movie:166696" : {
+    "anime-list" : [ 2866 ]
+  },
   "movie:166697" : {
     "anime-list" : [ 2609 ]
   },
   "movie:166706" : {
     "anime-list" : [ 2876 ]
+  },
+  "movie:166795" : {
+    "anime-list" : [ 2368 ]
   },
   "movie:16767" : {
     "anime-list" : [ 208 ]
@@ -986,6 +1001,9 @@
   "movie:19263" : {
     "anime-list" : [ 4194 ]
   },
+  "movie:193336" : {
+    "anime-list" : [ 2506 ]
+  },
   "movie:194395" : {
     "anime-list" : [ 2021 ]
   },
@@ -1030,6 +1048,9 @@
   },
   "movie:205609" : {
     "anime-list" : [ 7501 ]
+  },
+  "movie:20683" : {
+    "anime-list" : [ 3360 ]
   },
   "movie:20722" : {
     "anime-list" : [ 4849 ]
@@ -1099,6 +1120,12 @@
   },
   "movie:218791" : {
     "anime-list" : [ 2870 ]
+  },
+  "movie:219031" : {
+    "anime-list" : [ 3580 ]
+  },
+  "movie:220670" : {
+    "anime-list" : [ 3486 ]
   },
   "movie:220803" : {
     "anime-list" : [ 5071 ]
@@ -1190,6 +1217,9 @@
   "movie:239367" : {
     "anime-list" : [ 7667 ]
   },
+  "movie:239526" : {
+    "anime-list" : [ 5742 ]
+  },
   "movie:239530" : {
     "anime-list" : [ 7315 ]
   },
@@ -1210,6 +1240,9 @@
   },
   "movie:247089" : {
     "anime-list" : [ 3142 ]
+  },
+  "movie:247415" : {
+    "anime-list" : [ 2416 ]
   },
   "movie:249424" : {
     "anime-list" : [ 7672 ]
@@ -1292,6 +1325,9 @@
   "movie:266116" : {
     "anime-list" : [ 2664 ]
   },
+  "movie:266566" : {
+    "anime-list" : [ 718 ]
+  },
   "movie:266598" : {
     "anime-list" : [ 2007 ]
   },
@@ -1354,6 +1390,9 @@
   },
   "movie:283984" : {
     "anime-list" : [ 8282 ]
+  },
+  "movie:284235" : {
+    "anime-list" : [ 2627 ]
   },
   "movie:284755" : {
     "anime-list" : [ 1396 ]
@@ -1676,6 +1715,9 @@
   "movie:346882" : {
     "anime-list" : [ 5208 ]
   },
+  "movie:347182" : {
+    "anime-list" : [ 7910 ]
+  },
   "movie:347183" : {
     "anime-list" : [ 8503 ]
   },
@@ -1798,6 +1840,15 @@
   },
   "movie:365079" : {
     "anime-list" : [ 5361 ]
+  },
+  "movie:365290" : {
+    "anime-list" : [ 2183 ]
+  },
+  "movie:365293" : {
+    "anime-list" : [ 2701 ]
+  },
+  "movie:365294" : {
+    "anime-list" : [ 2720 ]
   },
   "movie:367750" : {
     "anime-list" : [ 4444 ]
@@ -2072,6 +2123,9 @@
   "movie:401043" : {
     "anime-list" : [ 8986 ]
   },
+  "movie:402023" : {
+    "anime-list" : [ 3340 ]
+  },
   "movie:402940" : {
     "anime-list" : [ 5265 ]
   },
@@ -2096,8 +2150,14 @@
   "movie:403895" : {
     "anime-list" : [ 9429 ]
   },
+  "movie:403896" : {
+    "anime-list" : [ 7910 ]
+  },
   "movie:404508" : {
     "anime-list" : [ 2585 ]
+  },
+  "movie:404616" : {
+    "anime-list" : [ 104 ]
   },
   "movie:405049" : {
     "anime-list" : [ 2190 ]
@@ -2113,6 +2173,9 @@
   },
   "movie:408973" : {
     "anime-list" : [ 6426 ]
+  },
+  "movie:409372" : {
+    "anime-list" : [ 3627 ]
   },
   "movie:409379" : {
     "anime-list" : [ 2503 ]
@@ -2312,6 +2375,9 @@
   "movie:441687" : {
     "anime-list" : [ 3189 ]
   },
+  "movie:441707" : {
+    "anime-list" : [ 1561 ]
+  },
   "movie:44179" : {
     "anime-list" : [ 966 ]
   },
@@ -2375,6 +2441,9 @@
   "movie:447810" : {
     "anime-list" : [ 5176 ]
   },
+  "movie:448817" : {
+    "anime-list" : [ 2565 ]
+  },
   "movie:449977" : {
     "anime-list" : [ 5180 ]
   },
@@ -2410,6 +2479,9 @@
   },
   "movie:456994" : {
     "anime-list" : [ 751 ]
+  },
+  "movie:459290" : {
+    "anime-list" : [ 8504 ]
   },
   "movie:460399" : {
     "anime-list" : [ 10314 ]
@@ -2798,6 +2870,9 @@
   "movie:547912" : {
     "anime-list" : [ 10432 ]
   },
+  "movie:550080" : {
+    "anime-list" : [ 10143 ]
+  },
   "movie:550082" : {
     "anime-list" : [ 9386 ]
   },
@@ -2854,6 +2929,9 @@
   },
   "movie:56069" : {
     "anime-list" : [ 2380 ]
+  },
+  "movie:56316" : {
+    "anime-list" : [ 2505 ]
   },
   "movie:56362" : {
     "anime-list" : [ 5406 ]
@@ -3170,6 +3248,9 @@
   "movie:633844" : {
     "anime-list" : [ 11212 ]
   },
+  "movie:634622" : {
+    "anime-list" : [ 1188 ]
+  },
   "movie:63486" : {
     "anime-list" : [ 2003 ]
   },
@@ -3332,6 +3413,9 @@
   "movie:68367" : {
     "anime-list" : [ 1099 ]
   },
+  "movie:684583" : {
+    "anime-list" : [ 3923 ]
+  },
   "movie:685274" : {
     "anime-list" : [ 11097 ]
   },
@@ -3416,6 +3500,12 @@
   "movie:719088" : {
     "anime-list" : [ 12152 ]
   },
+  "movie:72015" : {
+    "anime-list" : [ 210 ]
+  },
+  "movie:72016" : {
+    "anime-list" : [ 1936 ]
+  },
   "movie:721686" : {
     "anime-list" : [ 12333 ]
   },
@@ -3456,6 +3546,9 @@
     "anime-list" : [ 2938 ]
   },
   "movie:73529" : {
+    "anime-list" : [ 5686 ]
+  },
+  "movie:73530" : {
     "anime-list" : [ 5686 ]
   },
   "movie:737073" : {
@@ -3797,6 +3890,9 @@
   "movie:823" : {
     "anime-list" : [ 77 ]
   },
+  "movie:823417" : {
+    "anime-list" : [ 11441 ]
+  },
   "movie:82586" : {
     "anime-list" : [ 1176 ]
   },
@@ -3842,6 +3938,9 @@
   "movie:843267" : {
     "anime-list" : [ 11116 ]
   },
+  "movie:843269" : {
+    "anime-list" : [ 10143 ]
+  },
   "movie:84480" : {
     "anime-list" : [ 2006 ]
   },
@@ -3859,6 +3958,9 @@
   },
   "movie:846993" : {
     "anime-list" : [ 13025 ]
+  },
+  "movie:849420" : {
+    "anime-list" : [ 2886 ]
   },
   "movie:849907" : {
     "anime-list" : [ 13038 ]
@@ -4115,6 +4217,9 @@
   "movie:959964" : {
     "anime-list" : [ 6108 ]
   },
+  "movie:960466" : {
+    "anime-list" : [ 1019 ]
+  },
   "movie:9606" : {
     "anime-list" : [ 72 ]
   },
@@ -4128,13 +4233,19 @@
     "anime-list" : [ 8456 ]
   },
   "movie:96650" : {
-    "anime-list" : [ 2935, 2936 ]
+    "anime-list" : [ 2935 ]
+  },
+  "movie:96654" : {
+    "anime-list" : [ 2936 ]
   },
   "movie:968868" : {
     "anime-list" : [ 13690 ]
   },
   "movie:968870" : {
     "anime-list" : [ 13690 ]
+  },
+  "movie:968993" : {
+    "anime-list" : [ 12870 ]
   },
   "movie:969251" : {
     "anime-list" : [ 706 ]
@@ -4144,6 +4255,9 @@
   },
   "movie:970522" : {
     "anime-list" : [ 13762 ]
+  },
+  "movie:974593" : {
+    "anime-list" : [ 1604 ]
   },
   "movie:97576" : {
     "anime-list" : [ 6641 ]
@@ -4655,6 +4769,9 @@
   "tv:110837" : {
     "anime-list" : [ 12448, 15495 ]
   },
+  "tv:110909" : {
+    "anime-list" : [ 3339 ]
+  },
   "tv:110911" : {
     "anime-list" : [ 12322 ]
   },
@@ -4907,6 +5024,9 @@
   "tv:115842" : {
     "anime-list" : [ 5470 ]
   },
+  "tv:115867" : {
+    "anime-list" : [ 2338 ]
+  },
   "tv:115869" : {
     "anime-list" : [ 261 ]
   },
@@ -4933,6 +5053,9 @@
   },
   "tv:116224" : {
     "anime-list" : [ 12716 ]
+  },
+  "tv:116244" : {
+    "anime-list" : [ 2121 ]
   },
   "tv:116269" : {
     "anime-list" : [ 324 ]
@@ -7460,6 +7583,9 @@
   "tv:24019" : {
     "anime-list" : [ 590, 874 ]
   },
+  "tv:240370" : {
+    "anime-list" : [ 1985 ]
+  },
   "tv:240399" : {
     "anime-list" : [ 14147 ]
   },
@@ -8077,6 +8203,9 @@
   },
   "tv:26707" : {
     "anime-list" : [ 4251, 4702, 4892 ]
+  },
+  "tv:26769" : {
+    "anime-list" : [ 2812 ]
   },
   "tv:26792" : {
     "anime-list" : [ 3891, 3986 ]
@@ -9113,9 +9242,6 @@
   "tv:30631" : {
     "anime-list" : [ 4315 ]
   },
-  "tv:306565" : {
-    "anime-list" : [ 14797 ]
-  },
   "tv:30669" : {
     "anime-list" : [ 294, 715, 1023, 11521 ]
   },
@@ -9544,6 +9670,9 @@
   },
   "tv:335194" : {
     "anime-list" : [ 14340 ]
+  },
+  "tv:336554" : {
+    "anime-list" : [ 15662 ]
   },
   "tv:33728" : {
     "anime-list" : [ 3346 ]
@@ -11372,6 +11501,9 @@
   "tv:43903" : {
     "anime-list" : [ 728 ]
   },
+  "tv:43910" : {
+    "anime-list" : [ 3280 ]
+  },
   "tv:43926" : {
     "anime-list" : [ 6111 ]
   },
@@ -11404,6 +11536,9 @@
   },
   "tv:44009" : {
     "anime-list" : [ 2127 ]
+  },
+  "tv:44022" : {
+    "anime-list" : [ 840 ]
   },
   "tv:44038" : {
     "anime-list" : [ 6887 ]
@@ -11440,6 +11575,9 @@
   },
   "tv:44257" : {
     "anime-list" : [ 2096 ]
+  },
+  "tv:44261" : {
+    "anime-list" : [ 3591 ]
   },
   "tv:44272" : {
     "anime-list" : [ 459, 460 ]
@@ -11879,6 +12017,9 @@
   "tv:45306" : {
     "anime-list" : [ 4823, 6351, 6947, 7064, 7144 ]
   },
+  "tv:45319" : {
+    "anime-list" : [ 2985 ]
+  },
   "tv:45348" : {
     "anime-list" : [ 159, 1213, 4036, 6193, 6401, 8195 ]
   },
@@ -12106,6 +12247,9 @@
   },
   "tv:46252" : {
     "anime-list" : [ 912, 2029 ]
+  },
+  "tv:46253" : {
+    "anime-list" : [ 1417 ]
   },
   "tv:46260" : {
     "anime-list" : [ 228, 1347, 2645, 3567, 5518, 7492 ]
@@ -12622,6 +12766,9 @@
   },
   "tv:57127" : {
     "anime-list" : [ 6343 ]
+  },
+  "tv:57144" : {
+    "anime-list" : [ 2952 ]
   },
   "tv:5719" : {
     "anime-list" : [ 1002 ]
@@ -14816,6 +14963,9 @@
   "tv:75431" : {
     "anime-list" : [ 8737 ]
   },
+  "tv:75599" : {
+    "anime-list" : [ 2228 ]
+  },
   "tv:75775" : {
     "anime-list" : [ 10506 ]
   },
@@ -15469,6 +15619,9 @@
   },
   "tv:81426" : {
     "anime-list" : [ 3222, 6870, 13168, 13636 ]
+  },
+  "tv:81655" : {
+    "anime-list" : [ 2909 ]
   },
   "tv:82014" : {
     "anime-list" : [ 8221 ]
@@ -16824,7 +16977,10 @@
     "anime-list" : [ 409 ]
   },
   "tv:97421" : {
-    "anime-list" : [ 377 ]
+    "anime-list" : [ 377, 15238, 15239 ]
+  },
+  "tv:97455" : {
+    "anime-list" : [ 2441 ]
   },
   "tv:97525" : {
     "anime-list" : [ 12246, 13143, 14103 ]
