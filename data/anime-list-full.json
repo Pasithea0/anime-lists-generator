@@ -2701,7 +2701,7 @@
   "themoviedb_id" : {
     "tv" : 44621
   },
-  "tvdb_id" : 94611,
+  "tvdb_id" : 84141,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
@@ -8091,7 +8091,7 @@
   "animecountdown_id" : 36274,
   "anime-planet_id" : "pretear",
   "anisearch_id" : 2625,
-  "imdb_id" : [ "tt0431562" ],
+  "imdb_id" : [ "tt0429414" ],
   "kitsu_id" : 79,
   "livechart_id" : 5511,
   "mal_id" : 100,
@@ -223801,6 +223801,7 @@
   "animenewsnetwork_id" : 34708,
   "anime-planet_id" : "toaru-anbu-no-item",
   "anisearch_id" : 20176,
+  "imdb_id" : [ "tt41295083" ],
   "kitsu_id" : 49564,
   "livechart_id" : 13043,
   "mal_id" : 61014,
@@ -224176,6 +224177,7 @@
   "animecountdown_id" : 2731104,
   "anime-planet_id" : "gensou-suikoden",
   "anisearch_id" : 20276,
+  "imdb_id" : [ "tt42938834" ],
   "livechart_id" : 13068,
   "mal_id" : 61140,
   "simkl_id" : 2731104,
@@ -226700,10 +226702,19 @@
   "animenewsnetwork_id" : 36880,
   "anime-planet_id" : "black-clover-2nd-season",
   "anisearch_id" : 20716,
+  "imdb_id" : [ "tt7441658" ],
   "kitsu_id" : 50024,
   "livechart_id" : 13232,
   "mal_id" : 61967,
-  "simkl_id" : 2829490
+  "simkl_id" : 2829490,
+  "themoviedb_id" : {
+    "tv" : 73223
+  },
+  "tvdb_id" : 331753,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 2
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 19434,
@@ -228763,9 +228774,13 @@
   "animenewsnetwork_id" : 37883,
   "anime-planet_id" : "matsurika-kanriden",
   "anisearch_id" : 21305,
+  "imdb_id" : [ "tt42027051" ],
   "livechart_id" : 13348,
   "mal_id" : 62605,
   "simkl_id" : 2892678,
+  "themoviedb_id" : {
+    "tv" : 324599
+  },
   "tvdb_id" : 468758,
   "season" : {
     "tvdb" : 1
@@ -228905,6 +228920,7 @@
   "animecountdown_id" : 2893986,
   "animenewsnetwork_id" : 36508,
   "anisearch_id" : 20867,
+  "imdb_id" : [ "tt39281420" ],
   "kitsu_id" : 50253,
   "livechart_id" : 13255,
   "mal_id" : 62005,
@@ -229538,7 +229554,16 @@
   }
 }, {
   "type" : "TV",
-  "anidb_id" : 19714
+  "anidb_id" : 19714,
+  "imdb_id" : [ "tt43650419" ],
+  "themoviedb_id" : {
+    "tv" : 333622
+  },
+  "tvdb_id" : 470347,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 19715,
@@ -230662,6 +230687,7 @@
   "anilist_id" : 205896,
   "animenewsnetwork_id" : 38274,
   "anime-planet_id" : "full-clearing-another-world-under-a-goddess-with-zero-believers",
+  "imdb_id" : [ "tt43650265" ],
   "livechart_id" : 13477,
   "mal_id" : 63292,
   "themoviedb_id" : {
@@ -231418,7 +231444,7 @@
   "mal_id" : 63509,
   "simkl_id" : 3029646,
   "themoviedb_id" : {
-    "tv" : 336554
+    "tv" : 335790
   },
   "tvdb_id" : 474294,
   "season" : {
@@ -231743,6 +231769,7 @@
   "type" : "TV",
   "anidb_id" : 19951,
   "animecountdown_id" : 3050960,
+  "imdb_id" : [ "tt41295113" ],
   "mal_id" : 63818,
   "simkl_id" : 3050960,
   "themoviedb_id" : {
@@ -231984,6 +232011,9 @@
   "anime-planet_id" : "the-final-boss-prince-is-somehow-obsessed-with-the-chubby-villainess-reincarnated-me",
   "livechart_id" : 13522,
   "mal_id" : 63476,
+  "themoviedb_id" : {
+    "tv" : 336994
+  },
   "tvdb_id" : 473974,
   "season" : {
     "tvdb" : 1
@@ -232303,6 +232333,7 @@
   "anilist_id" : 211778,
   "animecountdown_id" : 3103152,
   "anisearch_id" : 21543,
+  "imdb_id" : [ "tt43691408" ],
   "kitsu_id" : 50697,
   "livechart_id" : 13623,
   "mal_id" : 64084,
@@ -232927,7 +232958,16 @@
   "mal_id" : 64528
 }, {
   "type" : "ONA",
-  "anidb_id" : 20156
+  "anidb_id" : 20156,
+  "imdb_id" : [ "tt43337681" ],
+  "themoviedb_id" : {
+    "tv" : 289324
+  },
+  "tvdb_id" : 462774,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 20159,
