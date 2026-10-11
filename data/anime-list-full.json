@@ -8282,6 +8282,7 @@
   "animenewsnetwork_id" : 2151,
   "anime-planet_id" : "lime-iro-senkitan",
   "anisearch_id" : 113,
+  "imdb_id" : [ "tt0991059" ],
   "kitsu_id" : 982,
   "livechart_id" : 5971,
   "mal_id" : 1097,
@@ -21644,6 +21645,7 @@
   "animecountdown_id" : 39897,
   "anime-planet_id" : "legend-of-the-galactic-heroes-gaiden",
   "anisearch_id" : 1596,
+  "imdb_id" : [ "tt6206772" ],
   "kitsu_id" : 2963,
   "livechart_id" : 4484,
   "mal_id" : 3371,
@@ -21663,6 +21665,7 @@
   "animecountdown_id" : 40681,
   "anime-planet_id" : "legend-of-the-galactic-heroes-gaiden-season-2",
   "anisearch_id" : 3344,
+  "imdb_id" : [ "tt6206772" ],
   "kitsu_id" : 3178,
   "livechart_id" : 4771,
   "mal_id" : 3665,
@@ -32766,6 +32769,7 @@
   "animenewsnetwork_id" : 4001,
   "anime-planet_id" : "lime-iro-senkitan-nankoku-yume-roman",
   "anisearch_id" : 2178,
+  "imdb_id" : [ "tt0991059" ],
   "kitsu_id" : 2089,
   "livechart_id" : 8327,
   "mal_id" : 2307,
@@ -41540,6 +41544,7 @@
   "animecountdown_id" : 38416,
   "anime-planet_id" : "lime-iro-ryuukitan-x",
   "anisearch_id" : 1552,
+  "imdb_id" : [ "tt0991059" ],
   "kitsu_id" : 2090,
   "livechart_id" : 7411,
   "mal_id" : 2308,
@@ -131588,13 +131593,9 @@
   "animecountdown_id" : 1572777,
   "anime-planet_id" : "katsura-hime",
   "anisearch_id" : 10537,
-  "imdb_id" : [ "tt0422569" ],
   "kitsu_id" : 10193,
   "mal_id" : 28419,
-  "simkl_id" : 1572777,
-  "themoviedb_id" : {
-    "movie" : [ 798833 ]
-  }
+  "simkl_id" : 1572777
 }, {
   "type" : "OVA",
   "anidb_id" : 11184,
@@ -224184,7 +224185,7 @@
   "themoviedb_id" : {
     "tv" : 285710
   },
-  "tvdb_id" : 460979,
+  "tvdb_id" : 482279,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
@@ -227176,7 +227177,7 @@
   "animenewsnetwork_id" : 37026,
   "anime-planet_id" : "kusunokis-garden-of-gods",
   "anisearch_id" : 20878,
-  "imdb_id" : [ "tt17351512" ],
+  "imdb_id" : [ "tt39122739" ],
   "kitsu_id" : 50171,
   "livechart_id" : 13243,
   "mal_id" : 62050,
@@ -230025,6 +230026,7 @@
   "animenewsnetwork_id" : 38113,
   "anime-planet_id" : "kyoufu-collector",
   "anisearch_id" : 21098,
+  "imdb_id" : [ "tt48391033" ],
   "livechart_id" : 13416,
   "mal_id" : 63053,
   "simkl_id" : 2957216,
@@ -230289,10 +230291,19 @@
   "animenewsnetwork_id" : 38154,
   "anime-planet_id" : "a-wild-last-boss-appeared-2",
   "anisearch_id" : 21117,
+  "imdb_id" : [ "tt33258199" ],
   "kitsu_id" : 50404,
   "livechart_id" : 13442,
   "mal_id" : 63140,
-  "simkl_id" : 2970782
+  "simkl_id" : 2970782,
+  "themoviedb_id" : {
+    "tv" : 280042
+  },
+  "tvdb_id" : 453694,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 2
+  }
 }, {
   "type" : "SPECIAL",
   "anidb_id" : 19778,
@@ -231448,7 +231459,8 @@
   },
   "tvdb_id" : 474294,
   "season" : {
-    "tvdb" : 1
+    "tvdb" : 1,
+    "tmdb" : 1
   }
 }, {
   "type" : "TV",
@@ -232390,12 +232402,17 @@
   "anilist_id" : 211877,
   "animenewsnetwork_id" : 39391,
   "anisearch_id" : 21562,
+  "imdb_id" : [ "tt43650454" ],
   "kitsu_id" : 50752,
   "livechart_id" : 13628,
   "mal_id" : 64131,
+  "themoviedb_id" : {
+    "tv" : 336654
+  },
   "tvdb_id" : 477658,
   "season" : {
-    "tvdb" : 1
+    "tvdb" : 1,
+    "tmdb" : 1
   }
 }, {
   "type" : "ONA",
