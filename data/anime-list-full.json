@@ -8956,6 +8956,7 @@
   "animenewsnetwork_id" : 1118,
   "anime-planet_id" : "g-on-riders",
   "anisearch_id" : 3432,
+  "imdb_id" : [ "tt0872175" ],
   "kitsu_id" : 1458,
   "livechart_id" : 7509,
   "mal_id" : 1623,
@@ -68999,6 +69000,7 @@
   "animenewsnetwork_id" : 7220,
   "anime-planet_id" : "musashi-no-ken",
   "anisearch_id" : 4208,
+  "imdb_id" : [ "tt28024274" ],
   "kitsu_id" : 3440,
   "livechart_id" : 9050,
   "mal_id" : 4062,
@@ -185293,10 +185295,19 @@
   "animecountdown_id" : 1400639,
   "anime-planet_id" : "wu-shan-wu-xing",
   "anisearch_id" : 15493,
+  "imdb_id" : [ "tt12953630" ],
   "kitsu_id" : 41361,
   "livechart_id" : 9027,
   "mal_id" : 37936,
-  "simkl_id" : 1400639
+  "simkl_id" : 1400639,
+  "themoviedb_id" : {
+    "tv" : 102788
+  },
+  "tvdb_id" : 383686,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 15664,
@@ -200878,10 +200889,22 @@
   "animecountdown_id" : 2225300,
   "anime-planet_id" : "wu-shan-wu-xing-xichuan-huan-zi-lin",
   "anisearch_id" : 17148,
+  "imdb_id" : [ "tt12953630" ],
   "kitsu_id" : 45557,
   "livechart_id" : 11590,
   "mal_id" : 50407,
-  "simkl_id" : 2225300
+  "simkl_id" : 2225300,
+  "themoviedb_id" : {
+    "tv" : 102788
+  },
+  "tvdb_id" : 383686,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 1
+  },
+  "episode_offset" : {
+    "tmdb" : 3
+  }
 }, {
   "anidb_id" : 17242
 }, {
@@ -218777,10 +218800,19 @@
   "animecountdown_id" : 2505906,
   "anime-planet_id" : "magic-knight-rayearth-2026",
   "anisearch_id" : 19448,
+  "imdb_id" : [ "tt32813343" ],
   "kitsu_id" : 49008,
   "livechart_id" : 12737,
   "mal_id" : 59204,
-  "simkl_id" : 2505906
+  "simkl_id" : 2505906,
+  "themoviedb_id" : {
+    "tv" : 303272
+  },
+  "tvdb_id" : 452013,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 18730,
@@ -225202,9 +225234,22 @@
   "anilist_id" : 190054,
   "anime-planet_id" : "my-happy-marriage-new",
   "anisearch_id" : 20463,
+  "imdb_id" : [ "tt19869172" ],
   "kitsu_id" : 49838,
   "livechart_id" : 13135,
-  "mal_id" : 61440
+  "mal_id" : 61440,
+  "themoviedb_id" : {
+    "tv" : 196944
+  },
+  "tvdb_id" : 418665,
+  "season" : {
+    "tvdb" : 0,
+    "tmdb" : 0
+  },
+  "episode_offset" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 19281,
@@ -225586,10 +225631,19 @@
   "animecountdown_id" : 2767602,
   "anime-planet_id" : "aoashi-season-2",
   "anisearch_id" : 20477,
+  "imdb_id" : [ "tt15792808" ],
   "kitsu_id" : 49883,
   "livechart_id" : 13151,
   "mal_id" : 61603,
-  "simkl_id" : 2767602
+  "simkl_id" : 2767602,
+  "themoviedb_id" : {
+    "tv" : 126437
+  },
+  "tvdb_id" : 407840,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 2
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 19319,
@@ -227268,7 +227322,7 @@
   "themoviedb_id" : {
     "tv" : 296286
   },
-  "tvdb_id" : 465973,
+  "tvdb_id" : 483430,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
@@ -228488,7 +228542,7 @@
   "themoviedb_id" : {
     "tv" : 312266
   },
-  "tvdb_id" : 468399,
+  "tvdb_id" : 483755,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
@@ -228712,10 +228766,19 @@
   "animenewsnetwork_id" : 37881,
   "anime-planet_id" : "hotel-inhumans-2nd-season",
   "anisearch_id" : 20932,
+  "imdb_id" : [ "tt35995459" ],
   "kitsu_id" : 50208,
   "livechart_id" : 13344,
   "mal_id" : 62590,
-  "simkl_id" : 2890902
+  "simkl_id" : 2890902,
+  "themoviedb_id" : {
+    "tv" : 276288
+  },
+  "tvdb_id" : 456463,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 2
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 19622,
@@ -228903,7 +228966,7 @@
   "themoviedb_id" : {
     "tv" : 302051
   },
-  "tvdb_id" : 468809,
+  "tvdb_id" : 483427,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
@@ -230462,7 +230525,16 @@
   "anilist_id" : 205290
 }, {
   "type" : "TV",
-  "anidb_id" : 19795
+  "anidb_id" : 19795,
+  "imdb_id" : [ "tt32344704" ],
+  "themoviedb_id" : {
+    "tv" : 253811
+  },
+  "tvdb_id" : 449843,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 2
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 19796,
@@ -232569,7 +232641,16 @@
   "type" : "TV",
   "anidb_id" : 20077,
   "anisearch_id" : 21586,
-  "mal_id" : 64340
+  "imdb_id" : [ "tt43691353" ],
+  "mal_id" : 64340,
+  "themoviedb_id" : {
+    "tv" : 324502
+  },
+  "tvdb_id" : 478752,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 20078,
@@ -232589,7 +232670,16 @@
   "type" : "TV",
   "anidb_id" : 20081,
   "animecountdown_id" : 3140904,
-  "simkl_id" : 3140904
+  "imdb_id" : [ "tt43339903" ],
+  "simkl_id" : 3140904,
+  "themoviedb_id" : {
+    "tv" : 323937
+  },
+  "tvdb_id" : 478770,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 20082,
@@ -232616,7 +232706,16 @@
 }, {
   "type" : "TV",
   "anidb_id" : 20085,
-  "anime-planet_id" : "sgt-frog-2026"
+  "anime-planet_id" : "sgt-frog-2026",
+  "imdb_id" : [ "tt45373165" ],
+  "themoviedb_id" : {
+    "tv" : 308977
+  },
+  "tvdb_id" : 472037,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 20086,
@@ -232919,7 +233018,20 @@
   }
 }, {
   "type" : "TV",
-  "anidb_id" : 20143
+  "anidb_id" : 20143,
+  "imdb_id" : [ "tt3105422" ],
+  "themoviedb_id" : {
+    "tv" : 60761
+  },
+  "tvdb_id" : 273005,
+  "season" : {
+    "tvdb" : 4,
+    "tmdb" : 4
+  },
+  "episode_offset" : {
+    "tvdb" : 13,
+    "tmdb" : 13
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 20144
@@ -233071,6 +233183,17 @@
   },
   "episode_offset" : {
     "tmdb" : 13
+  }
+}, {
+  "anidb_id" : 20348,
+  "imdb_id" : [ "tt15660128" ],
+  "themoviedb_id" : {
+    "tv" : 205493
+  },
+  "tvdb_id" : 411222,
+  "season" : {
+    "tvdb" : 5,
+    "tmdb" : 3
   }
 }, {
   "type" : "SPECIAL",
