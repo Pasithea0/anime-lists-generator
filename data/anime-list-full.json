@@ -5897,7 +5897,7 @@
   "animenewsnetwork_id" : 1185,
   "anime-planet_id" : "atashinchi",
   "anisearch_id" : 2038,
-  "imdb_id" : [ "tt1127682" ],
+  "imdb_id" : [ "tt0320828" ],
   "kitsu_id" : 2717,
   "livechart_id" : 12495,
   "mal_id" : 3006,
@@ -100727,6 +100727,7 @@
   "animecountdown_id" : 40351,
   "anime-planet_id" : "waza-no-tabibito",
   "anisearch_id" : 7197,
+  "imdb_id" : [ "tt15823320" ],
   "kitsu_id" : 6399,
   "livechart_id" : 13164,
   "mal_id" : 10904,
@@ -201981,18 +201982,18 @@
   "animecountdown_id" : 1894562,
   "anime-planet_id" : "shaman-king-flowers",
   "anisearch_id" : 17339,
-  "imdb_id" : [ "tt12502782" ],
+  "imdb_id" : [ "tt30873755" ],
   "kitsu_id" : 46079,
   "livechart_id" : 11189,
   "mal_id" : 51673,
   "simkl_id" : 1894562,
   "themoviedb_id" : {
-    "tv" : 104699
+    "tv" : 232865
   },
-  "tvdb_id" : 383837,
+  "tvdb_id" : 444823,
   "season" : {
     "tvdb" : 2,
-    "tmdb" : 2
+    "tmdb" : 1
   }
 }, {
   "type" : "TV",
@@ -226947,17 +226948,18 @@
   "animenewsnetwork_id" : 36864,
   "anime-planet_id" : "cyberpunk-edgerunners-2",
   "anisearch_id" : 20705,
+  "imdb_id" : [ "tt12590266" ],
   "kitsu_id" : 50016,
   "livechart_id" : 13230,
   "mal_id" : 61990,
   "simkl_id" : 2830474,
   "themoviedb_id" : {
-    "tv" : 326788
+    "tv" : 105248
   },
   "tvdb_id" : 384541,
   "season" : {
     "tvdb" : 2,
-    "tmdb" : 1
+    "tmdb" : 2
   }
 }, {
   "type" : "ONA",

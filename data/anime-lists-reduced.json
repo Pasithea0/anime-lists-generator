@@ -77028,12 +77028,12 @@
 }, {
   "anidb_id" : 17327,
   "themoviedb_id" : {
-    "tv" : 104699
+    "tv" : 232865
   },
   "tvdb_id" : 383837,
   "season" : {
     "tvdb" : 2,
-    "tmdb" : 2
+    "tmdb" : 1
   }
 }, {
   "anidb_id" : 17328,
@@ -85926,12 +85926,12 @@
 }, {
   "anidb_id" : 19445,
   "themoviedb_id" : {
-    "tv" : 326788
+    "tv" : 105248
   },
   "tvdb_id" : 384541,
   "season" : {
     "tvdb" : 2,
-    "tmdb" : 1
+    "tmdb" : 2
   }
 }, {
   "anidb_id" : 19448,
