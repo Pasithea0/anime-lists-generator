@@ -9721,7 +9721,7 @@
   "themoviedb_id" : {
     "tv" : 35529
   },
-  "tvdb_id" : 195161,
+  "tvdb_id" : 474463,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
@@ -29375,7 +29375,7 @@
   "themoviedb_id" : {
     "tv" : 35529
   },
-  "tvdb_id" : 195161,
+  "tvdb_id" : 474463,
   "season" : {
     "tvdb" : 0,
     "tmdb" : 0
@@ -45445,6 +45445,7 @@
   "animecountdown_id" : 37053,
   "anime-planet_id" : "wrath-of-the-ninja-ova",
   "anisearch_id" : 1171,
+  "imdb_id" : [ "tt5317270" ],
   "kitsu_id" : 3134,
   "livechart_id" : 12768,
   "mal_id" : 3600,
@@ -59135,7 +59136,7 @@
   "themoviedb_id" : {
     "tv" : 35529
   },
-  "tvdb_id" : 195161,
+  "tvdb_id" : 474463,
   "season" : {
     "tvdb" : 0,
     "tmdb" : 0
@@ -110952,7 +110953,7 @@
   "themoviedb_id" : {
     "tv" : 35529
   },
-  "tvdb_id" : 195161,
+  "tvdb_id" : 474463,
   "season" : {
     "tvdb" : 0,
     "tmdb" : 0
@@ -230149,6 +230150,7 @@
   "anidb_id" : 19757,
   "anilist_id" : 203651,
   "anisearch_id" : 21062,
+  "imdb_id" : [ "tt50623895" ],
   "themoviedb_id" : {
     "tv" : 307705
   },
