@@ -35671,10 +35671,14 @@
   "animenewsnetwork_id" : 434,
   "anime-planet_id" : "andersen-monogatari-tv",
   "anisearch_id" : 942,
+  "imdb_id" : [ "tt0460353" ],
   "kitsu_id" : 5119,
   "livechart_id" : 11927,
   "mal_id" : 7779,
   "simkl_id" : 38787,
+  "themoviedb_id" : {
+    "tv" : 44376
+  },
   "tvdb_id" : 418709,
   "season" : {
     "tvdb" : 1
@@ -38509,10 +38513,14 @@
   "animenewsnetwork_id" : 1750,
   "anime-planet_id" : "zendaman",
   "anisearch_id" : 1941,
+  "imdb_id" : [ "tt1392084" ],
   "kitsu_id" : 4770,
   "livechart_id" : 7818,
   "mal_id" : 6889,
   "simkl_id" : 38833,
+  "themoviedb_id" : {
+    "tv" : 96609
+  },
   "tvdb_id" : 405844,
   "season" : {
     "tvdb" : 1
@@ -38536,9 +38544,13 @@
   "animenewsnetwork_id" : 1752,
   "anime-planet_id" : "gyakuten-ippatsu-man",
   "anisearch_id" : 916,
+  "imdb_id" : [ "tt1525650" ],
   "kitsu_id" : 5171,
   "mal_id" : 8011,
   "simkl_id" : 41287,
+  "themoviedb_id" : {
+    "tv" : 68607
+  },
   "tvdb_id" : 405890,
   "season" : {
     "tvdb" : 1
@@ -50701,9 +50713,13 @@
   "animenewsnetwork_id" : 4739,
   "anime-planet_id" : "space-oz-no-bouken",
   "anisearch_id" : 148,
+  "imdb_id" : [ "tt0098886" ],
   "kitsu_id" : 3018,
   "mal_id" : 3451,
   "simkl_id" : 39829,
+  "themoviedb_id" : {
+    "tv" : 42528
+  },
   "tvdb_id" : 445336,
   "season" : {
     "tvdb" : 1
@@ -94091,10 +94107,14 @@
   "animenewsnetwork_id" : 11824,
   "anime-planet_id" : "tatsuya-miyanishi-theatre-heart-and-yummie",
   "anisearch_id" : 6509,
+  "imdb_id" : [ "tt1733928" ],
   "kitsu_id" : 5720,
   "livechart_id" : 7882,
   "mal_id" : 9395,
   "simkl_id" : 40822,
+  "themoviedb_id" : {
+    "tv" : 125245
+  },
   "tvdb_id" : 195861,
   "season" : {
     "tvdb" : 1
@@ -161052,16 +161072,14 @@
   "mal_id" : 36946,
   "simkl_id" : 747259,
   "themoviedb_id" : {
-    "tv" : 62715
+    "movie" : [ 503314 ]
   },
   "tvdb_id" : 295068,
   "season" : {
-    "tvdb" : 0,
-    "tmdb" : 0
+    "tvdb" : 0
   },
   "episode_offset" : {
-    "tvdb" : 4,
-    "tmdb" : 4
+    "tvdb" : 2
   }
 }, {
   "type" : "TV",
@@ -199457,7 +199475,10 @@
   "tvdb_id" : 392226,
   "season" : {
     "tvdb" : 2,
-    "tmdb" : 2
+    "tmdb" : 1
+  },
+  "episode_offset" : {
+    "tmdb" : 26
   }
 }, {
   "type" : "TV",
@@ -212893,9 +212914,18 @@
   "animecountdown_id" : 2275520,
   "anime-planet_id" : "renegade-immortal",
   "anisearch_id" : 20755,
+  "imdb_id" : [ "tt27432264" ],
   "kitsu_id" : 48036,
   "mal_id" : 55809,
-  "simkl_id" : 2275520
+  "simkl_id" : 2275520,
+  "themoviedb_id" : {
+    "tv" : 223911
+  },
+  "tvdb_id" : 433335,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 18238,
@@ -214490,9 +214520,21 @@
   "anilist_id" : 166218,
   "animecountdown_id" : 2333758,
   "anime-planet_id" : "swallowed-star-3rd-season",
+  "imdb_id" : [ "tt17050076" ],
   "kitsu_id" : 48060,
   "mal_id" : 56523,
-  "simkl_id" : 2333758
+  "simkl_id" : 2333758,
+  "themoviedb_id" : {
+    "tv" : 101172
+  },
+  "tvdb_id" : 392226,
+  "season" : {
+    "tvdb" : 3,
+    "tmdb" : 1
+  },
+  "episode_offset" : {
+    "tmdb" : 52
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 18365,
@@ -214500,9 +214542,21 @@
   "animecountdown_id" : 2333760,
   "anime-planet_id" : "swallowed-star-4th-season",
   "anisearch_id" : 18815,
+  "imdb_id" : [ "tt17050076" ],
   "kitsu_id" : 48061,
   "mal_id" : 56524,
-  "simkl_id" : 2333760
+  "simkl_id" : 2333760,
+  "themoviedb_id" : {
+    "tv" : 101172
+  },
+  "tvdb_id" : 392226,
+  "season" : {
+    "tvdb" : 4,
+    "tmdb" : 1
+  },
+  "episode_offset" : {
+    "tmdb" : 85
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 18366,
@@ -223150,7 +223204,7 @@
   "themoviedb_id" : {
     "tv" : 287075
   },
-  "tvdb_id" : 458309,
+  "tvdb_id" : 483423,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
@@ -228292,14 +228346,10 @@
   "animenewsnetwork_id" : 37834,
   "anime-planet_id" : "victoria-of-many-faces",
   "anisearch_id" : 20881,
-  "imdb_id" : [ "tt38273525" ],
   "kitsu_id" : 50805,
   "livechart_id" : 13315,
   "mal_id" : 62476,
   "simkl_id" : 2881090,
-  "themoviedb_id" : {
-    "tv" : 302519
-  },
   "tvdb_id" : 468049,
   "season" : {
     "tvdb" : 1
@@ -228737,10 +228787,21 @@
   "animenewsnetwork_id" : 37877,
   "anime-planet_id" : "rascal-does-not-dream-of-a-dear-friend",
   "anisearch_id" : 20924,
+  "imdb_id" : [ "tt39927807" ],
   "kitsu_id" : 50192,
   "livechart_id" : 13341,
   "mal_id" : 62582,
-  "simkl_id" : 2890694
+  "simkl_id" : 2890694,
+  "themoviedb_id" : {
+    "movie" : [ 1553200 ]
+  },
+  "tvdb_id" : 345596,
+  "season" : {
+    "tvdb" : 0
+  },
+  "episode_offset" : {
+    "tvdb" : 8
+  }
 }, {
   "type" : "TV",
   "anidb_id" : 19618,
