@@ -20038,7 +20038,7 @@
   "mal_id" : 1811,
   "simkl_id" : 38533,
   "themoviedb_id" : {
-    "movie" : [ 138036 ]
+    "tv" : 97419
   },
   "tvdb_id" : 278048,
   "season" : {
@@ -73086,7 +73086,7 @@
   "themoviedb_id" : {
     "tv" : 87852
   },
-  "tvdb_id" : 87961,
+  "tvdb_id" : 84176,
   "season" : {
     "tvdb" : 1,
     "tmdb" : 1
@@ -95133,7 +95133,6 @@
   },
   "tvdb_id" : 247805,
   "season" : {
-    "tvdb" : 1,
     "tmdb" : 1
   }
 }, {
@@ -184991,10 +184990,19 @@
   "animecountdown_id" : 1560059,
   "anime-planet_id" : "ling-cage",
   "anisearch_id" : 14750,
+  "imdb_id" : [ "tt10827146" ],
   "kitsu_id" : 42431,
   "livechart_id" : 9485,
   "mal_id" : 39675,
-  "simkl_id" : 1560059
+  "simkl_id" : 1560059,
+  "themoviedb_id" : {
+    "tv" : 91097
+  },
+  "tvdb_id" : 366841,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  }
 }, {
   "type" : "MOVIE",
   "anidb_id" : 15633,
@@ -185460,10 +185468,23 @@
   "anilist_id" : 120300,
   "animecountdown_id" : 1403705,
   "anime-planet_id" : "ling-cage-part-ii",
+  "imdb_id" : [ "tt10827146" ],
   "kitsu_id" : 43617,
   "livechart_id" : 10045,
   "mal_id" : 42290,
-  "simkl_id" : 1403705
+  "simkl_id" : 1403705,
+  "themoviedb_id" : {
+    "tv" : 91097
+  },
+  "tvdb_id" : 366841,
+  "season" : {
+    "tvdb" : 1,
+    "tmdb" : 1
+  },
+  "episode_offset" : {
+    "tvdb" : 6,
+    "tmdb" : 6
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 15675,
@@ -192179,9 +192200,22 @@
   "animecountdown_id" : 1642623,
   "anime-planet_id" : "ling-cage-final-chapter",
   "anisearch_id" : 19899,
+  "imdb_id" : [ "tt10827146" ],
   "kitsu_id" : 43743,
   "mal_id" : 44090,
-  "simkl_id" : 1642623
+  "simkl_id" : 1642623,
+  "themoviedb_id" : {
+    "tv" : 91097
+  },
+  "tvdb_id" : 366841,
+  "season" : {
+    "tvdb" : 0,
+    "tmdb" : 0
+  },
+  "episode_offset" : {
+    "tvdb" : 4,
+    "tmdb" : 13
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 16314,
@@ -192299,9 +192333,22 @@
   "animecountdown_id" : 1648987,
   "anime-planet_id" : "ling-cage-incarnation-special",
   "anisearch_id" : 19857,
+  "imdb_id" : [ "tt10827146" ],
   "kitsu_id" : 44571,
   "mal_id" : 48890,
-  "simkl_id" : 1648987
+  "simkl_id" : 1648987,
+  "themoviedb_id" : {
+    "tv" : 91097
+  },
+  "tvdb_id" : 366841,
+  "season" : {
+    "tvdb" : 0,
+    "tmdb" : 0
+  },
+  "episode_offset" : {
+    "tvdb" : 2,
+    "tmdb" : 15
+  }
 }, {
   "type" : "ONA",
   "anidb_id" : 16330,
@@ -217591,9 +217638,13 @@
   "animenewsnetwork_id" : 37934,
   "anime-planet_id" : "atashinchi-next",
   "anisearch_id" : 19081,
+  "imdb_id" : [ "tt34680890" ],
   "livechart_id" : 12494,
   "mal_id" : 57822,
   "simkl_id" : 3021866,
+  "themoviedb_id" : {
+    "tv" : 255083
+  },
   "tvdb_id" : 450707,
   "season" : {
     "tvdb" : 1
@@ -225987,9 +226038,18 @@
   "anilist_id" : 135580,
   "animecountdown_id" : 2792290,
   "anime-planet_id" : "ling-long-2nd-season",
+  "imdb_id" : [ "tt10827146" ],
   "kitsu_id" : 48310,
   "mal_id" : 60570,
-  "simkl_id" : 2792290
+  "simkl_id" : 2792290,
+  "themoviedb_id" : {
+    "tv" : 91097
+  },
+  "tvdb_id" : 366841,
+  "season" : {
+    "tvdb" : 2,
+    "tmdb" : 2
+  }
 }, {
   "type" : "OVA",
   "anidb_id" : 19347,
